@@ -1,0 +1,1 @@
+export default function HomeRenovationTestimonials() { return <section className="py-24"><div className="max-w-7xl mx-auto px-4"><h2 className="text-4xl font-bold text-center">HomeRenovationTestimonials</h2></div></section>; }

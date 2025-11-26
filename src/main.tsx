@@ -1,0 +1,25 @@
+import { StrictMode } from 'react';
+import { createRoot } from 'react-dom/client';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import App from './App.tsx';
+import AboutPage from './pages/AboutPage.tsx';
+import ServicesPage from './pages/ServicesPage.tsx';
+import BasementPage from './pages/BasementPage.tsx';
+import HomeRenovationPage from './pages/HomeRenovationPage.tsx';
+import ContactPage from './pages/ContactPage.tsx';
+import './index.css';
+
+createRoot(document.getElementById('root')!).render(
+  <StrictMode>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<App />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/services" element={<ServicesPage />} />
+        <Route path="/basement-renovation" element={<BasementPage />} />
+        <Route path="/home-renovation" element={<HomeRenovationPage />} />
+        <Route path="/contact" element={<ContactPage />} />
+      </Routes>
+    </BrowserRouter>
+  </StrictMode>
+);
