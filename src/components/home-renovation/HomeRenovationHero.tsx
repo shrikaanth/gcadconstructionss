@@ -13,23 +13,85 @@ export default function HomeRenovationHero() {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 pt-24">
       <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0zNiAxOGMtNi42MjcgMC0xMiA1LjM3My0xMiAxMnM1LjM3MyAxMiAxMiAxMiAxMi01LjM3MyAxMi0xMi01LjM3My0xMi0xMi0xMnptMCAyMmMtNS41MjMgMC0xMC00LjQ3Ny0xMC0xMHM0LjQ3Ny0xMCAxMC0xMCAxMCA0LjQ3NyAxMCAxMC00LjQ3NyAxMC0xMCAxMHoiIGZpbGw9IiMwMGFlZWYiIGZpbGwtb3BhY2l0eT0iMC4wNSIvPjwvZz48L3N2Zz4=')] opacity-30"></div>
       <div className="absolute top-20 left-10 w-96 h-96 bg-[#00aeef] rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
+      <div className="absolute top-40 right-10 w-96 h-96 bg-purple-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
+      <div className="absolute -bottom-8 left-1/2 w-96 h-96 bg-pink-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-4000"></div>
+
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className={`text-center transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+          <div className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 rounded-full mb-8 backdrop-blur-sm">
+            <Sparkles className="w-5 h-5 text-purple-400" />
+            <span className="text-purple-300 font-semibold">Complete Home Transformations</span>
+          </div>
+
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
             Home Renovation &
             <br />
-            <span className="text-[#00aeef]">Interior Remodeling</span>
+            <span className="text-[#00aeef] inline-block hover:scale-105 transition-transform duration-300">Interior Remodeling</span>
           </h1>
-          <p className="text-2xl md:text-3xl text-gray-300 mb-12">
+
+          <p className="text-2xl md:text-3xl text-gray-300 mb-6 max-w-4xl mx-auto">
             Transform your home into a modern, comfortable, beautifully finished space.
           </p>
-          <Link
-            to="/contact"
-            className="group px-10 py-5 bg-[#00aeef] text-white font-bold text-xl rounded-xl hover:shadow-2xl hover:shadow-[#00aeef]/50 transition-all duration-300 hover:scale-105 inline-flex items-center gap-3"
-          >
-            Start Your Home Upgrade
-            <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform duration-300" />
-          </Link>
+
+          <p className="text-lg text-gray-400 mb-12 max-w-3xl mx-auto leading-relaxed">
+            Whether it's a single room or a complete interior makeover, GCAD brings craftsmanship, smart design, and reliability to every renovation project across the GTA.
+          </p>
+
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
+            <Link
+              to="/contact"
+              className="group px-10 py-5 bg-[#00aeef] text-white font-bold text-xl rounded-xl hover:shadow-2xl hover:shadow-[#00aeef]/50 transition-all duration-300 hover:scale-105 inline-flex items-center gap-3"
+            >
+              Start Your Home Upgrade
+              <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform duration-300" />
+            </Link>
+
+            <Link
+              to="/portfolio"
+              className="px-10 py-5 bg-white/10 backdrop-blur-sm border border-white/20 text-white font-bold text-xl rounded-xl hover:bg-white/20 transition-all duration-300 hover:scale-105"
+            >
+              View Our Portfolio
+            </Link>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            {[
+              { icon: Home, title: 'Full Service', desc: 'Single rooms to entire homes', color: 'from-blue-500 to-cyan-500' },
+              { icon: Sparkles, title: 'Quality Materials', desc: 'Durable, premium finishes', color: 'from-purple-500 to-pink-500' },
+              { icon: TrendingUp, title: 'Value Boost', desc: 'Renovations that pay back', color: 'from-green-500 to-emerald-500' }
+            ].map((feature, index) => {
+              const Icon = feature.icon;
+              return (
+                <div
+                  key={index}
+                  className="group p-8 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 hover:border-[#00aeef]/50 transition-all duration-500 hover:scale-105 hover:bg-white/10"
+                >
+                  <div className={`inline-flex p-4 bg-gradient-to-br ${feature.color} rounded-xl mb-4 group-hover:scale-110 transition-transform duration-300`}>
+                    <Icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-2">{feature.title}</h3>
+                  <p className="text-gray-400">{feature.desc}</p>
+                </div>
+              );
+            })}
+          </div>
+
+          <div className="mt-12 flex flex-wrap justify-center gap-3">
+            {['✓ Licensed Contractors', '✓ Premium Materials', '✓ GTA Trusted', '✓ Modern Designs'].map((badge, idx) => (
+              <span
+                key={idx}
+                className="px-4 py-2 bg-white/5 border border-white/10 text-white/80 rounded-full text-sm hover:bg-white/10 hover:border-[#00aeef]/50 transition-all duration-300"
+              >
+                {badge}
+              </span>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+        <div className="w-6 h-10 border-2 border-white/30 rounded-full p-1">
+          <div className="w-1.5 h-3 bg-[#00aeef] rounded-full mx-auto animate-scroll"></div>
         </div>
       </div>
     </section>
