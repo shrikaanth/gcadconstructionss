@@ -79,7 +79,7 @@ export default function BasementHero() {
           </div>
 
           <div className="mt-12 flex flex-wrap justify-center gap-3">
-            {['✓ Ontario Compliant', '✓ Licensed & Insured', '✓ 250+ Basements Built', '✓ 5-Star Rated'].map((badge, idx) => (
+            {['✓ Regulation Compliant', '✓ Licensed & Insured', '✓ 250+ Basements Built', '✓ 5-Star Rated'].map((badge, idx) => (
               <span
                 key={idx}
                 className="px-4 py-2 bg-white/5 border border-white/10 text-white/80 rounded-full text-sm hover:bg-white/10 hover:border-[#00aeef]/50 transition-all duration-300"

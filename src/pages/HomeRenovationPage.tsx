@@ -1,12 +1,10 @@
 import Header from '../components/Header';
 import HomeRenovationHero from '../components/home-renovation/HomeRenovationHero';
-import RenovationTypes from '../components/home-renovation/RenovationTypes';
 import TransformationGallery from '../components/home-renovation/TransformationGallery';
-import WhyChooseUs from '../components/home-renovation/WhyChooseUs';
 import RenovationProcess from '../components/home-renovation/RenovationProcess';
-import HomeRenovationTestimonials from '../components/home-renovation/HomeRenovationTestimonials';
 import HomeRenovationCTA from '../components/home-renovation/HomeRenovationCTA';
 import Footer from '../components/Footer';
+import WhatsAppButton from '../components/WhatsAppButton';
 
 export default function HomeRenovationPage() {
   return (
@@ -14,14 +12,12 @@ export default function HomeRenovationPage() {
       <Header />
       <main>
         <HomeRenovationHero />
-        <RenovationTypes />
         <TransformationGallery />
-        <WhyChooseUs />
         <RenovationProcess />
-        <HomeRenovationTestimonials />
         <HomeRenovationCTA />
       </main>
       <Footer />
+      <WhatsAppButton />
     </div>
   );
 }

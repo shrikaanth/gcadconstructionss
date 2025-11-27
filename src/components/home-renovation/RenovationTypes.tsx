@@ -83,13 +83,17 @@ export default function RenovationTypes() {
               onMouseEnter={() => setActiveType(idx)}
               onMouseLeave={() => setActiveType(null)}
             >
-              <div className={`relative bg-gradient-to-br from-gray-50 to-white rounded-3xl border-2 overflow-hidden transition-all duration-500 ${
-                activeType === idx
-                  ? 'border-[#00aeef] shadow-2xl shadow-[#00aeef]/20'
-                  : 'border-gray-200'
-              }`}>
+              <div
+                className={`relative bg-gradient-to-br from-gray-50 to-white rounded-3xl border-2 overflow-hidden transition-all duration-500 ${
+                  activeType === idx
+                    ? 'border-[#00aeef] shadow-2xl shadow-[#00aeef]/20'
+                    : 'border-gray-200'
+                }`}
+              >
                 <div className={`grid lg:grid-cols-2 gap-0 ${idx % 2 === 1 ? 'lg:grid-flow-dense' : ''}`}>
-                  <div className={`relative h-80 lg:h-auto overflow-hidden ${idx % 2 === 1 ? 'lg:col-start-2' : ''}`}>
+                  <div
+                    className={`relative h-80 lg:h-auto overflow-hidden ${idx % 2 === 1 ? 'lg:col-start-2' : ''}`}
+                  >
                     <img
                       src={type.image}
                       alt={type.title}
@@ -97,9 +101,11 @@ export default function RenovationTypes() {
                         activeType === idx ? 'scale-110' : 'scale-100'
                       }`}
                     />
-                    <div className={`absolute inset-0 bg-gradient-to-br ${type.color} opacity-20 transition-opacity duration-500 ${
-                      activeType === idx ? 'opacity-30' : 'opacity-20'
-                    }`}></div>
+                    <div
+                      className={`absolute inset-0 bg-gradient-to-br ${type.color} opacity-20 transition-opacity duration-500 ${
+                        activeType === idx ? 'opacity-30' : 'opacity-20'
+                      }`}
+                    ></div>
 
                     <div className="absolute top-6 left-6">
                       <div className="text-6xl group-hover:scale-110 transition-transform duration-500">
@@ -145,9 +151,11 @@ export default function RenovationTypes() {
                   </div>
                 </div>
 
-                <div className={`absolute bottom-0 left-0 right-0 h-2 bg-gradient-to-r ${type.color} transform origin-left transition-transform duration-700 ${
-                  activeType === idx ? 'scale-x-100' : 'scale-x-0'
-                }`}></div>
+                <div
+                  className={`absolute bottom-0 left-0 right-0 h-2 bg-gradient-to-r ${type.color} transform origin-left transition-transform duration-700 ${
+                    activeType === idx ? 'scale-x-100' : 'scale-x-0'
+                  }`}
+                ></div>
               </div>
             </div>
           ))}

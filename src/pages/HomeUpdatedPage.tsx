@@ -7,6 +7,7 @@ import Portfolio from '../components/Portfolio';
 import Testimonials from '../components/Testimonials';
 import FinalCTA from '../components/FinalCTA';
 import Footer from '../components/Footer';
+import WhatsAppButton from '../components/WhatsAppButton';
 
 export default function HomeUpdatedPage() {
   return (
@@ -34,6 +35,7 @@ export default function HomeUpdatedPage() {
         </div>
       </main>
       <Footer />
+      <WhatsAppButton />
     </div>
   );
 }

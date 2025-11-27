@@ -1,37 +1,32 @@
-import { PenTool, Hammer, Sparkles, Check } from 'lucide-react';
+import { PenTool, Home, Droplet, Check } from 'lucide-react';
 import { useEffect, useRef, useState } from 'react';
 
 const included = [
   {
-    category: 'Design & Planning',
+    category: 'Bedroom Suites',
     icon: PenTool,
     color: 'from-blue-500 to-cyan-500',
     items: [
-      { name: 'Functional layouts', desc: 'Optimized space planning for your needs' },
-      { name: '2D/3D visualization', desc: 'See your basement before we build' },
-      { name: 'Lighting & utility planning', desc: 'Strategic placement for comfort' }
+      { name: 'Two full bedrooms', desc: 'Built-in closets, egress windows, and sound-insulated walls' },
+      { name: 'Smart layout planning', desc: 'Comfortable spacing for sleeping, storage, or flex use' }
     ]
   },
   {
-    category: 'Construction & Finishing',
-    icon: Hammer,
+    category: '10 FT Kitchenette',
+    icon: Home,
     color: 'from-purple-500 to-pink-500',
     items: [
-      { name: 'Framing, insulation & drywall', desc: 'Quality foundation and structure' },
-      { name: 'Premium vinyl/laminate flooring', desc: 'Durable, beautiful flooring options' },
-      { name: 'Electrical, lighting & fixtures', desc: 'Modern, code-compliant installation' },
-      { name: 'Painting, trim & finishing touches', desc: 'Professional final details' }
+      { name: '10-foot linear kitchen', desc: 'Premium cabinetry, quartz counters, backsplash, and lighting' },
+      { name: 'Appliance-ready hookups', desc: 'Electrical, plumbing, and ventilation prepared for your appliances' }
     ]
   },
   {
-    category: 'Optional Enhancements',
-    icon: Sparkles,
+    category: 'Luxury Bathroom',
+    icon: Droplet,
     color: 'from-green-500 to-emerald-500',
     items: [
-      { name: 'Bathroom', desc: 'Full or half bath installation' },
-      { name: 'Wet bar', desc: 'Entertainment-ready bar area' },
-      { name: 'Custom storage', desc: 'Built-in shelving and closets' },
-      { name: 'Feature walls', desc: 'Accent walls and special finishes' }
+      { name: 'Full bathroom build', desc: 'Custom shower or tub, vanity, lighting, and tile finishes' },
+      { name: 'Under 700 sq ft package', desc: 'Optimized footprint with fixtures, storage, and ventilation' }
     ]
   }
 ];

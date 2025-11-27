@@ -67,41 +67,6 @@ export default function BasementPricing() {
             );
           })}
         </div>
-
-        <div className={`transition-all duration-1000 delay-600 ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}>
-          <div className="bg-gradient-to-br from-gray-900 to-gray-800 rounded-3xl p-12 relative overflow-hidden">
-            <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0zNiAxOGMtNi42MjcgMC0xMiA1LjM3My0xMiAxMnM1LjM3MyAxMiAxMiAxMiAxMi01LjM3MyAxMi0xMi01LjM3My0xMi0xMi0xMnptMCAyMmMtNS41MjMgMC0xMC00LjQ3Ny0xMC0xMHM0LjQ3Ny0xMCAxMC0xMCAxMCA0LjQ3NyAxMCAxMC00LjQ3NyAxMC0xMCAxMHoiIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wNSIvPjwvZz48L3N2Zz4=')] opacity-30"></div>
-
-            <div className="relative z-10 text-center">
-              <div className="inline-block mb-8">
-                <div className="px-10 py-5 bg-[#00aeef] text-white font-bold rounded-full text-5xl shadow-2xl shadow-[#00aeef]/50 animate-pulse">
-                  Starting Under $47K
-                </div>
-              </div>
-
-              <h3 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Compare That to $90-120K Most Contractors Charge
-              </h3>
-
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-10">
-                Same quality work. Same Ontario compliance. Better price. Faster timeline.
-              </p>
-
-              <div className="grid md:grid-cols-3 gap-6">
-                {[
-                  { label: 'Average Market Price', value: '$90-120K', color: 'bg-red-500/20 border-red-500/30' },
-                  { label: 'GCAD Package Price', value: 'Under $47K', color: 'bg-[#00aeef]/20 border-[#00aeef]/30' },
-                  { label: 'You Save', value: '$43-73K', color: 'bg-green-500/20 border-green-500/30' }
-                ].map((item, idx) => (
-                  <div key={idx} className={`p-6 ${item.color} backdrop-blur-sm rounded-xl border-2`}>
-                    <p className="text-white/70 text-sm mb-2">{item.label}</p>
-                    <p className="text-4xl font-bold text-white">{item.value}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );

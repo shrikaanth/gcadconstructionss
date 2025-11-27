@@ -29,7 +29,7 @@ export default function AboutHero() {
           </h1>
 
           <p className="text-2xl md:text-3xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-            A Renovation Company Built on <span className="text-[#00aeef] font-semibold">Trust</span>, <span className="text-[#00aeef] font-semibold">Craftsmanship</span> & <span className="text-[#00aeef] font-semibold">Clear Communication</span>
+            Ontario’s Trusted Choice for Basement Transformations
           </p>
 
           <div className="max-w-3xl mx-auto mb-12">

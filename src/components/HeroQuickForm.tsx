@@ -109,7 +109,7 @@ export default function HeroQuickForm() {
                   value={formData.phone}
                   onChange={handleChange}
                   required
-                  placeholder="(416) 555-1234"
+                  placeholder="+1 (437) 255-8805"
                   className="w-full rounded-xl border border-white/20 bg-white/5 pl-10 pr-4 py-3 text-white placeholder:text-gray-400 focus:border-[#00aeef] focus:ring-2 focus:ring-[#00aeef]/30 outline-none transition-all"
                 />
               </div>

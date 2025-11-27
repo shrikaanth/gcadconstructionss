@@ -7,6 +7,7 @@ import Portfolio from './components/Portfolio';
 import Testimonials from './components/Testimonials';
 import FinalCTA from './components/FinalCTA';
 import Footer from './components/Footer';
+import WhatsAppButton from './components/WhatsAppButton';
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
         </div>
       </main>
       <Footer />
+      <WhatsAppButton />
     </div>
   );
 }

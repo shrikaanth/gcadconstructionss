@@ -150,9 +150,12 @@ export default function Header() {
             </nav>
 
             <div className="hidden md:block">
-              <button className="px-6 py-3 bg-[#00aeef] text-white font-semibold rounded-lg hover:shadow-xl hover:shadow-[#00aeef]/50 transition-all duration-300 hover:scale-105">
-                Get Free Quote
-              </button>
+              <a
+                href="tel:+14372558805"
+                className="px-6 py-3 bg-[#00aeef] text-white font-semibold rounded-lg hover:shadow-xl hover:shadow-[#00aeef]/50 transition-all duration-300 hover:scale-105"
+              >
+                +1 (437) 255-8805
+              </a>
             </div>
 
             <button
@@ -238,9 +241,12 @@ export default function Header() {
                   </button>
                 );
               })}
-              <button className="mt-4 px-4 py-3 bg-[#00aeef] text-white font-semibold rounded-lg hover:shadow-xl hover:shadow-[#00aeef]/50 transition-all duration-300">
-                Get Free Quote
-              </button>
+              <a
+                href="tel:+14372558805"
+                className="mt-4 px-4 py-3 bg-[#00aeef] text-white font-semibold rounded-lg hover:shadow-xl hover:shadow-[#00aeef]/50 transition-all duration-300 text-center"
+              >
+                +1 (437) 255-8805
+              </a>
             </nav>
           </div>
         </div>

@@ -47,18 +47,12 @@ export default function Hero() {
               </span>
             </div>
 
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              Basements That{' '}
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
+              Ontario’s Leading{' '}
               <span className="text-[#00aeef] inline-block hover:scale-105 transition-transform duration-300">
-                Add Value
-              </span>
-              .
-              <br />
-              Homes That Feel{' '}
-              <span className="text-[#00aeef] inline-block hover:scale-105 transition-transform duration-300">
-                New Again
-              </span>
-              .
+                Basement Renovation
+              </span>{' '}
+              Specialists
             </h1>
 
             <p className="text-xl md:text-2xl text-gray-300 mb-4 max-w-2xl lg:mx-0 mx-auto">
@@ -98,7 +92,7 @@ export default function Hero() {
               {[
                 { number: '250+', label: 'Renovations Completed' },
                 { number: '10+', label: 'Years of Experience' },
-                { number: '100%', label: 'Ontario Compliant' }
+                { number: '100%', label: 'Regulation Compliant' }
               ].map((stat, index) => (
                 <div
                   key={index}

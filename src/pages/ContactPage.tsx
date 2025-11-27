@@ -4,6 +4,7 @@ import ContactForm from '../components/contact/ContactForm';
 import ServiceArea from '../components/contact/ServiceArea';
 import ContactInfo from '../components/contact/ContactInfo';
 import Footer from '../components/Footer';
+import WhatsAppButton from '../components/WhatsAppButton';
 
 export default function ContactPage() {
   return (
@@ -16,6 +17,7 @@ export default function ContactPage() {
         <ContactInfo />
       </main>
       <Footer />
+      <WhatsAppButton />
     </div>
   );
 }

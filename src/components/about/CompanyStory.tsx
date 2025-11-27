@@ -118,7 +118,7 @@ export default function CompanyStory() {
                   <div className="text-5xl font-bold mb-2 group-hover:scale-110 transition-transform duration-300">
                     100%
                   </div>
-                  <div className="text-white/90 font-medium">Ontario Compliant</div>
+                  <div className="text-white/90 font-medium">Regulation Compliant</div>
                 </div>
 
                 <div className="group p-6 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl text-white hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-2xl hover:shadow-purple-500/30">

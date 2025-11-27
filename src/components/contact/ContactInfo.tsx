@@ -41,18 +41,18 @@ export default function ContactInfo() {
             {
               icon: Phone,
               title: 'Call Us',
-              primary: '(416) 555-GCAD',
+              primary: '+1 (437) 255-8805',
               secondary: 'Mon-Sat: 9AM - 7PM',
               color: 'from-blue-500 to-cyan-500',
-              action: 'tel:4165554223'
+              action: 'tel:+14372558805'
             },
             {
               icon: MessageCircle,
-              title: 'WhatsApp',
-              primary: '(416) 555-GCAD',
-              secondary: 'Quick responses',
+              title: 'Chat on WhatsApp',
+              primary: '+1 (437) 255-8805',
+              secondary: 'Instant answers from our team',
               color: 'from-green-500 to-emerald-500',
-              action: 'https://wa.me/14165554223'
+              action: 'https://wa.me/14372558805'
             },
             {
               icon: Mail,
@@ -104,39 +104,6 @@ export default function ContactInfo() {
               </div>
             );
           })}
-        </div>
-
-        <div className={`transition-all duration-1000 delay-400 ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}>
-          <div className="bg-gradient-to-br from-slate-900 to-slate-800 rounded-3xl p-12 relative overflow-hidden">
-            <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0zNiAxOGMtNi42MjcgMC0xMiA1LjM3My0xMiAxMnM1LjM3MyAxMiAxMiAxMiAxMi01LjM3MyAxMi0xMi01LjM3My0xMi0xMi0xMnptMCAyMmMtNS41MjMgMC0xMC00LjQ3Ny0xMC0xMHM0LjQ3Ny0xMCAxMC0xMCAxMCA0LjQ3NyAxMCAxMC00LjQ3NyAxMC0xMCAxMHoiIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wNSIvPjwvZz48L3N2Zz4=')] opacity-30"></div>
-
-            <div className="relative z-10 text-center">
-              <h3 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                What Happens After You Contact Us?
-              </h3>
-
-              <div className="grid md:grid-cols-4 gap-6 mt-10">
-                {[
-                  { step: '01', title: 'Quick Response', desc: 'We reply within 24 hours' },
-                  { step: '02', title: 'Free Consultation', desc: 'Discuss your project needs' },
-                  { step: '03', title: 'Detailed Quote', desc: 'Clear pricing breakdown' },
-                  { step: '04', title: 'Start Building', desc: 'Transform your space' }
-                ].map((step, idx) => (
-                  <div key={idx} className="p-6 bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20 hover:bg-white/20 transition-all duration-300">
-                    <div className="inline-flex items-center justify-center w-12 h-12 bg-[#00aeef] text-white font-bold text-xl rounded-full mb-4">
-                      {step.step}
-                    </div>
-                    <h4 className="text-lg font-bold text-white mb-2">{step.title}</h4>
-                    <p className="text-sm text-gray-300">{step.desc}</p>
-                  </div>
-                ))}
-              </div>
-
-              <p className="text-xl text-gray-300 mt-10 max-w-3xl mx-auto">
-                We're here to make your renovation journey smooth and stress-free from start to finish.
-              </p>
-            </div>
-          </div>
         </div>
       </div>
     </section>

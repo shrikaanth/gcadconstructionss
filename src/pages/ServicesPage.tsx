@@ -6,6 +6,7 @@ import HomeRenovationService from '../components/services/HomeRenovationService'
 import ServiceBenefits from '../components/services/ServiceBenefits';
 import ServicesCTA from '../components/services/ServicesCTA';
 import Footer from '../components/Footer';
+import WhatsAppButton from '../components/WhatsAppButton';
 
 export default function ServicesPage() {
   return (
@@ -20,6 +21,7 @@ export default function ServicesPage() {
         <ServicesCTA />
       </main>
       <Footer />
+      <WhatsAppButton />
     </div>
   );
 }
