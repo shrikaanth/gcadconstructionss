@@ -1,4 +1,5 @@
 import { Home, Wrench, Check, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { useEffect, useRef, useState } from 'react';
 
 const services = [
@@ -18,7 +19,8 @@ const services = [
     idealFor: ['Family room', 'Office', 'Guest suite', 'Play area', 'Gym'],
     upgrades: ['Bathroom', 'Wet bar', 'Storage', 'Accent walls'],
     color: 'from-blue-500 to-cyan-500',
-    image: 'https://images.pexels.com/photos/1648776/pexels-photo-1648776.jpeg?auto=compress&cs=tinysrgb&w=800'
+    image: 'https://images.pexels.com/photos/1648776/pexels-photo-1648776.jpeg?auto=compress&cs=tinysrgb&w=800',
+    route: '/basement-renovation'
   },
   {
     icon: Wrench,
@@ -36,7 +38,8 @@ const services = [
     idealFor: ['Modern kitchens', 'Spa bathrooms', 'Open concept', 'Hardwood floors'],
     upgrades: ['Custom cabinetry', 'Smart home', 'Lighting design', 'Premium finishes'],
     color: 'from-purple-500 to-pink-500',
-    image: 'https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=800'
+    image: 'https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=800',
+    route: '/home-renovation'
   }
 ];
 
@@ -94,21 +97,28 @@ export default function ServicesOverview() {
                 }`}>
                   <div className={`grid lg:grid-cols-2 gap-0 ${idx % 2 === 1 ? 'lg:grid-flow-dense' : ''}`}>
                     <div className={`relative h-96 lg:h-auto overflow-hidden ${idx % 2 === 1 ? 'lg:col-start-2' : ''}`}>
-                      <img
-                        src={service.image}
-                        alt={service.title}
-                        className={`w-full h-full object-cover transition-transform duration-700 ${
-                          activeService === idx ? 'scale-110' : 'scale-100'
-                        }`}
-                      />
-                      <div className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-20 transition-opacity duration-500 ${
-                        activeService === idx ? 'opacity-30' : 'opacity-20'
-                      }`}></div>
-                      <div className="absolute top-6 left-6">
-                        <div className="px-6 py-3 bg-white/95 backdrop-blur-sm rounded-full shadow-lg">
-                          <span className="text-[#00aeef] font-bold text-lg">{service.subtitle}</span>
+                      <Link to={service.route} className="group/hero block h-full">
+                        <img
+                          src={service.image}
+                          alt={service.title}
+                          className={`w-full h-full object-cover transition-transform duration-700 ${
+                            activeService === idx ? 'scale-110' : 'scale-100'
+                          }`}
+                        />
+                        <div className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-20 transition-opacity duration-500 ${
+                          activeService === idx ? 'opacity-30' : 'opacity-20'
+                        }`}></div>
+                        <div className="absolute inset-0 bg-black/20 opacity-0 group-hover/hero:opacity-100 transition-opacity duration-300"></div>
+                        <div className="absolute top-6 left-6">
+                          <div className="px-6 py-3 bg-white/95 backdrop-blur-sm rounded-full shadow-lg">
+                            <span className="text-[#00aeef] font-bold text-lg">{service.subtitle}</span>
+                          </div>
                         </div>
-                      </div>
+                        <div className="absolute bottom-6 right-6 flex items-center gap-2 text-white font-semibold opacity-0 group-hover/hero:opacity-100 transition-all duration-300">
+                          View {service.title}
+                          <ArrowRight className="w-5 h-5" />
+                        </div>
+                      </Link>
                     </div>
 
                     <div className="p-10 lg:p-12">
@@ -116,9 +126,11 @@ export default function ServicesOverview() {
                         <Icon className="w-10 h-10 text-white" />
                       </div>
 
-                      <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 hover:text-[#00aeef] transition-colors duration-300">
-                        {service.title}
-                      </h3>
+                      <Link to={service.route} className="inline-flex">
+                        <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 hover:text-[#00aeef] transition-colors duration-300">
+                          {service.title}
+                        </h3>
+                      </Link>
 
                       <p className="text-lg text-gray-600 mb-8 leading-relaxed">
                         {service.description}
@@ -196,11 +208,21 @@ export default function ServicesOverview() {
                 ))}
               </div>
 
-              <div className="mt-10 text-center">
-                <button className="group px-10 py-5 bg-[#00aeef] text-white font-bold text-lg rounded-xl hover:shadow-2xl hover:shadow-[#00aeef]/50 transition-all duration-300 hover:scale-105 inline-flex items-center gap-3">
-                  Explore Renovation Services
+              <div className="mt-10 text-center flex flex-col sm:flex-row items-center justify-center gap-4">
+                <Link
+                  to="/basement-renovation"
+                  className="group px-10 py-5 bg-[#00aeef] text-white font-bold text-lg rounded-xl hover:shadow-2xl hover:shadow-[#00aeef]/50 transition-all duration-300 hover:scale-105 inline-flex items-center gap-3"
+                >
+                  Basement Packages
                   <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform duration-300" />
-                </button>
+                </Link>
+                <Link
+                  to="/home-renovation"
+                  className="group px-10 py-5 bg-white/10 text-white font-bold text-lg rounded-xl border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 inline-flex items-center gap-3"
+                >
+                  Home Renovation Plans
+                  <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform duration-300" />
+                </Link>
               </div>
             </div>
           </div>

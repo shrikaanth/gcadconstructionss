@@ -1,5 +1,6 @@
 import { ArrowRight, Home, Sparkles, TrendingUp } from 'lucide-react';
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 export default function HomeRenovationHero() {
   const [isVisible, setIsVisible] = useState(false);
@@ -22,10 +23,13 @@ export default function HomeRenovationHero() {
           <p className="text-2xl md:text-3xl text-gray-300 mb-12">
             Transform your home into a modern, comfortable, beautifully finished space.
           </p>
-          <button className="group px-10 py-5 bg-[#00aeef] text-white font-bold text-xl rounded-xl hover:shadow-2xl hover:shadow-[#00aeef]/50 transition-all duration-300 hover:scale-105 inline-flex items-center gap-3">
+          <Link
+            to="/contact"
+            className="group px-10 py-5 bg-[#00aeef] text-white font-bold text-xl rounded-xl hover:shadow-2xl hover:shadow-[#00aeef]/50 transition-all duration-300 hover:scale-105 inline-flex items-center gap-3"
+          >
             Start Your Home Upgrade
             <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform duration-300" />
-          </button>
+          </Link>
         </div>
       </div>
     </section>

@@ -1,5 +1,6 @@
 import { Calendar, Phone, Mail, ArrowRight, Home } from 'lucide-react';
 import { useEffect, useRef, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 export default function BasementCTA() {
   const [isVisible, setIsVisible] = useState(false);
@@ -57,16 +58,22 @@ export default function BasementCTA() {
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
-                  <button className="group px-12 py-6 bg-[#00aeef] text-white font-bold text-2xl rounded-xl hover:shadow-2xl hover:shadow-[#00aeef]/50 transition-all duration-300 hover:scale-105 inline-flex items-center gap-3">
+                  <Link
+                    to="/basement-renovation"
+                    className="group px-12 py-6 bg-[#00aeef] text-white font-bold text-2xl rounded-xl hover:shadow-2xl hover:shadow-[#00aeef]/50 transition-all duration-300 hover:scale-105 inline-flex items-center gap-3"
+                  >
                     <Home className="w-8 h-8" />
                     Book Free Basement Assessment
                     <ArrowRight className="w-8 h-8 group-hover:translate-x-2 transition-transform duration-300" />
-                  </button>
+                  </Link>
 
-                  <button className="group px-12 py-6 bg-white/10 backdrop-blur-sm border-2 border-white text-white font-bold text-2xl rounded-xl hover:bg-white/20 transition-all duration-300 hover:scale-105 inline-flex items-center gap-3">
+                  <a
+                    href="tel:+14165554223"
+                    className="group px-12 py-6 bg-white/10 backdrop-blur-sm border-2 border-white text-white font-bold text-2xl rounded-xl hover:bg-white/20 transition-all duration-300 hover:scale-105 inline-flex items-center gap-3"
+                  >
                     <Phone className="w-8 h-8" />
                     Call Now
-                  </button>
+                  </a>
                 </div>
               </div>
 
@@ -118,7 +125,7 @@ export default function BasementCTA() {
 
         <div className={`mt-12 text-center transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <div className="inline-flex flex-wrap items-center justify-center gap-3">
-            {['✓ 100+ Basements Built', '✓ Ontario Licensed', '✓ 4-6 Week Timeline', '✓ Clear $47K Pricing', '✓ No Hidden Fees'].map((badge, idx) => (
+            {['✓ 250+ Basements Built', '✓ Ontario Licensed', '✓ 4-6 Week Timeline', '✓ Clear $47K Pricing', '✓ No Hidden Fees'].map((badge, idx) => (
               <span
                 key={idx}
                 className="px-5 py-2.5 bg-gray-100 text-gray-700 rounded-full text-sm font-semibold hover:bg-[#00aeef] hover:text-white transition-all duration-300"

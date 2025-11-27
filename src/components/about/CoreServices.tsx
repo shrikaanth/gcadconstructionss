@@ -1,5 +1,6 @@
 import { Home, Wrench, ArrowRight } from 'lucide-react';
 import { useEffect, useRef, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const services = [
   {
@@ -127,10 +128,13 @@ export default function CoreServices() {
                       </div>
 
                       <div>
-                        <button className="group/btn inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-[#00aeef] to-cyan-500 text-white font-semibold rounded-xl hover:shadow-xl hover:shadow-[#00aeef]/50 transition-all duration-300 hover:scale-105">
+                        <Link
+                          to="/services"
+                          className="group/btn inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-[#00aeef] to-cyan-500 text-white font-semibold rounded-xl hover:shadow-xl hover:shadow-[#00aeef]/50 transition-all duration-300 hover:scale-105"
+                        >
                           Learn More
                           <ArrowRight className="w-5 h-5 group-hover/btn:translate-x-2 transition-transform duration-300" />
-                        </button>
+                        </Link>
                       </div>
                     </div>
                   </div>

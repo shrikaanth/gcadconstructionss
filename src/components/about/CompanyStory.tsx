@@ -52,7 +52,7 @@ export default function CompanyStory() {
               <div className="relative bg-gradient-to-br from-gray-50 to-white p-12 rounded-3xl border border-gray-200 shadow-xl">
                 <div className="mb-8">
                   <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#00aeef]/10 rounded-full mb-4">
-                    <span className="text-[#00aeef] font-bold">100+</span>
+                    <span className="text-[#00aeef] font-bold">250+</span>
                     <span className="text-gray-700">Renovations Completed</span>
                   </div>
                 </div>
@@ -62,7 +62,7 @@ export default function CompanyStory() {
                 </h3>
 
                 <p className="text-lg text-gray-700 mb-8 leading-relaxed">
-                  After completing 100+ renovations across the GTA, we've earned a reputation for being:
+                  After completing 250+ renovations across the GTA, we've earned a reputation for being:
                 </p>
 
                 <div className="space-y-4">

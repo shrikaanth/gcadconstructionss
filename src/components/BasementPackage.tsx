@@ -1,5 +1,6 @@
-import { Check, ArrowRight, Home, Lightbulb, Droplet, Archive } from 'lucide-react';
+import { Check, ArrowRight, Home, Lightbulb, Dumbbell, Archive } from 'lucide-react';
 import { useEffect, useRef, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const includedFeatures = [
   {
@@ -22,7 +23,7 @@ const includedFeatures = [
 ];
 
 const upgrades = [
-  { icon: Droplet, name: 'Bathroom', color: 'from-blue-500 to-cyan-500' },
+  { icon: Dumbbell, name: 'Home Gym', color: 'from-blue-500 to-cyan-500' },
   { icon: Home, name: 'Wet Bar', color: 'from-purple-500 to-pink-500' },
   { icon: Archive, name: 'Storage Solutions', color: 'from-orange-500 to-red-500' },
   { icon: Lightbulb, name: 'Closet Systems', color: 'from-green-500 to-emerald-500' }
@@ -168,10 +169,13 @@ export default function BasementPackage() {
         </div>
 
         <div className={`text-center transition-all duration-1000 delay-600 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <button className="group px-10 py-5 bg-[#00aeef] text-white font-bold text-lg rounded-xl hover:shadow-2xl hover:shadow-[#00aeef]/50 transition-all duration-300 hover:scale-105 inline-flex items-center gap-3">
+          <Link
+            to="/basement-renovation"
+            className="group px-10 py-5 bg-[#00aeef] text-white font-bold text-lg rounded-xl hover:shadow-2xl hover:shadow-[#00aeef]/50 transition-all duration-300 hover:scale-105 inline-flex items-center gap-3"
+          >
             Explore the Under-$47K Basement Package
             <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform duration-300" />
-          </button>
+          </Link>
         </div>
       </div>
     </section>

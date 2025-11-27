@@ -151,51 +151,6 @@ export default function Testimonials() {
             <ChevronRight className="w-6 h-6" />
           </button>
         </div>
-
-        <div className={`mt-20 transition-all duration-1000 delay-400 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <div className="bg-gradient-to-br from-gray-900 to-gray-800 rounded-3xl p-12 relative overflow-hidden">
-            <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0zNiAxOGMtNi42MjcgMC0xMiA1LjM3My0xMiAxMnM1LjM3MyAxMiAxMiAxMiAxMi01LjM3MyAxMi0xMi01LjM3My0xMi0xMi0xMnptMCAyMmMtNS41MjMgMC0xMC00LjQ3Ny0xMC0xMHM0LjQ3Ny0xMCAxMC0xMCAxMCA0LjQ3NyAxMCAxMC00LjQ3NyAxMC0xMCAxMHoiIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wNSIvPjwvZz48L3N2Zz4=')] opacity-30"></div>
-
-            <div className="relative z-10 text-center">
-              <h3 className="text-3xl font-bold text-white mb-4">
-                What Makes GCAD a Safe Choice
-              </h3>
-              <p className="text-gray-300 text-lg mb-10">
-                Renovation is a big decision. Here's why families trust us with their homes:
-              </p>
-
-              <div className="grid md:grid-cols-3 gap-6">
-                {[
-                  { title: 'Accurate Estimates', desc: 'No inflated numbers' },
-                  { title: 'Licensed & Insured', desc: 'Ontario building standards' },
-                  { title: '100+ Projects', desc: 'Proven results' },
-                  { title: 'Project Manager', desc: 'One point of contact' },
-                  { title: 'Clean Workflow', desc: 'Daily updates' },
-                  { title: 'Transparent Pricing', desc: 'No hidden costs' }
-                ].map((item, idx) => (
-                  <div
-                    key={idx}
-                    className="p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:bg-white/10 hover:border-[#00aeef]/50 transition-all duration-300 hover:scale-105"
-                  >
-                    <h4 className="text-xl font-bold text-[#00aeef] mb-2">{item.title}</h4>
-                    <p className="text-gray-300">{item.desc}</p>
-                  </div>
-                ))}
-              </div>
-
-              <div className="mt-10 flex flex-wrap justify-center gap-4">
-                {['WSIB Covered', 'Ontario-Approved', 'Licensed & Insured', 'Transparent Pricing'].map((badge, idx) => (
-                  <span
-                    key={idx}
-                    className="px-6 py-3 bg-[#00aeef]/20 border border-[#00aeef]/50 text-[#00aeef] font-semibold rounded-full backdrop-blur-sm hover:bg-[#00aeef]/30 transition-all duration-300"
-                  >
-                    {badge}
-                  </span>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );

@@ -41,7 +41,7 @@ export default function AboutHero() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
             {[
               { icon: Award, label: 'Licensed & Insured', color: 'from-blue-500 to-cyan-500' },
-              { icon: Users, label: '100+ Happy Clients', color: 'from-purple-500 to-pink-500' },
+              { icon: Users, label: '250+ Happy Clients', color: 'from-purple-500 to-pink-500' },
               { icon: TrendingUp, label: 'GTA Trusted', color: 'from-green-500 to-emerald-500' },
               { icon: Building2, label: 'Quality First', color: 'from-orange-500 to-red-500' }
             ].map((item, index) => {

@@ -1,5 +1,6 @@
 import { ArrowRight, Check, DollarSign, Clock, Home } from 'lucide-react';
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 export default function BasementHero() {
   const [isVisible, setIsVisible] = useState(false);
@@ -38,14 +39,20 @@ export default function BasementHero() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
-            <button className="group px-10 py-5 bg-[#00aeef] text-white font-bold text-xl rounded-xl hover:shadow-2xl hover:shadow-[#00aeef]/50 transition-all duration-300 hover:scale-105 inline-flex items-center gap-3">
+            <Link
+              to="/contact"
+              className="group px-10 py-5 bg-[#00aeef] text-white font-bold text-xl rounded-xl hover:shadow-2xl hover:shadow-[#00aeef]/50 transition-all duration-300 hover:scale-105 inline-flex items-center gap-3"
+            >
               Book Free Assessment
               <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform duration-300" />
-            </button>
+            </Link>
 
-            <button className="px-10 py-5 bg-white/10 backdrop-blur-sm border border-white/20 text-white font-bold text-xl rounded-xl hover:bg-white/20 transition-all duration-300 hover:scale-105">
+            <Link
+              to="/basement-renovation"
+              className="px-10 py-5 bg-white/10 backdrop-blur-sm border border-white/20 text-white font-bold text-xl rounded-xl hover:bg-white/20 transition-all duration-300 hover:scale-105"
+            >
               See Pricing Details
-            </button>
+            </Link>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
@@ -72,7 +79,7 @@ export default function BasementHero() {
           </div>
 
           <div className="mt-12 flex flex-wrap justify-center gap-3">
-            {['✓ Ontario Compliant', '✓ Licensed & Insured', '✓ 100+ Basements Built', '✓ 5-Star Rated'].map((badge, idx) => (
+            {['✓ Ontario Compliant', '✓ Licensed & Insured', '✓ 250+ Basements Built', '✓ 5-Star Rated'].map((badge, idx) => (
               <span
                 key={idx}
                 className="px-4 py-2 bg-white/5 border border-white/10 text-white/80 rounded-full text-sm hover:bg-white/10 hover:border-[#00aeef]/50 transition-all duration-300"

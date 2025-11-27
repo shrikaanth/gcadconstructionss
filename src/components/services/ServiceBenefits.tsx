@@ -149,11 +149,11 @@ export default function ServiceBenefits() {
                 Experience the Difference
               </h3>
               <p className="text-xl text-white/90 max-w-2xl mx-auto mb-8">
-                Join 100+ satisfied homeowners who chose GCAD for their renovation projects
+                Join 250+ satisfied homeowners who chose GCAD for their renovation projects
               </p>
 
               <div className="flex flex-wrap justify-center gap-4">
-                {['100+ Projects', 'Ontario Licensed', '5-Star Service', 'GTA Trusted'].map((badge, idx) => (
+                {['250+ Projects', 'Ontario Licensed', '5-Star Service', 'GTA Trusted'].map((badge, idx) => (
                   <span
                     key={idx}
                     className="px-6 py-3 bg-white/20 backdrop-blur-sm border border-white/30 text-white font-semibold rounded-full hover:bg-white/30 transition-all duration-300"

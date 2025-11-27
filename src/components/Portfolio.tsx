@@ -1,5 +1,6 @@
 import { MapPin, ArrowRight } from 'lucide-react';
 import { useEffect, useRef, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const projects = [
   {
@@ -128,10 +129,13 @@ export default function Portfolio() {
             <br />
             Each project is tailored to the homeowner's vision and lifestyle.
           </p>
-          <button className="group px-10 py-5 bg-gray-900 text-white font-bold text-lg rounded-xl hover:shadow-2xl hover:shadow-gray-900/50 transition-all duration-300 hover:scale-105 inline-flex items-center gap-3">
+          <Link
+            to="/portfolio"
+            className="group px-10 py-5 bg-gray-900 text-white font-bold text-lg rounded-xl hover:shadow-2xl hover:shadow-gray-900/50 transition-all duration-300 hover:scale-105 inline-flex items-center gap-3"
+          >
             View Full Portfolio
             <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform duration-300" />
-          </button>
+          </Link>
         </div>
       </div>
     </section>

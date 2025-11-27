@@ -1,22 +1,28 @@
 import { Building2, Phone, Mail, MapPin, Facebook, Instagram, Linkedin } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import ContactForm from './contact/ContactForm';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
     <footer className="bg-gray-900 text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 space-y-16">
+        <div className="bg-white text-gray-900 rounded-3xl shadow-2xl p-6 sm:p-8 md:p-12">
+          <ContactForm />
+        </div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
           <div>
-            <div className="flex items-center gap-3 mb-6">
-              <div className="p-2 bg-[#00aeef] rounded-xl">
+            <Link to="/" className="flex items-center gap-3 mb-6 group">
+              <div className="p-2 bg-[#00aeef] rounded-xl group-hover:scale-105 transition-transform duration-300">
                 <Building2 className="w-8 h-8 text-white" />
               </div>
               <div>
-                <h3 className="text-2xl font-bold">GCAD</h3>
+                <h3 className="text-2xl font-bold group-hover:text-[#00aeef] transition-colors duration-300">GCAD</h3>
                 <p className="text-sm text-gray-400">Construction</p>
               </div>
-            </div>
+            </Link>
             <p className="text-gray-400 leading-relaxed mb-6">
               Building quality homes and lasting relationships across the GTA. Your trusted partner for basement renovations and home transformations.
             </p>
@@ -45,15 +51,32 @@ export default function Footer() {
           <div>
             <h4 className="text-lg font-bold mb-6">Quick Links</h4>
             <ul className="space-y-3">
-              {['Home', 'About Us', 'Basement Package', 'Services', 'Portfolio', 'Testimonials'].map((link) => (
-                <li key={link}>
-                  <a
-                    href="#"
-                    className="text-gray-400 hover:text-[#00aeef] transition-colors duration-300 flex items-center gap-2 group"
-                  >
-                    <span className="w-0 h-0.5 bg-[#00aeef] group-hover:w-4 transition-all duration-300"></span>
-                    {link}
-                  </a>
+              {[
+                { label: 'Home', href: '/' },
+                { label: 'About Us', href: '/about' },
+                { label: 'Basement Package', href: '/basement-renovation' },
+                { label: 'Services', href: '/services' },
+                { label: 'Portfolio', href: '/portfolio' },
+                { label: 'Testimonials', href: '/' }
+              ].map((item) => (
+                <li key={item.label}>
+                  {item.href.startsWith('/#') ? (
+                    <a
+                      href={item.href}
+                      className="text-gray-400 hover:text-[#00aeef] transition-colors duration-300 flex items-center gap-2 group"
+                    >
+                      <span className="w-0 h-0.5 bg-[#00aeef] group-hover:w-4 transition-all duration-300"></span>
+                      {item.label}
+                    </a>
+                  ) : (
+                    <Link
+                      to={item.href}
+                      className="text-gray-400 hover:text-[#00aeef] transition-colors duration-300 flex items-center gap-2 group"
+                    >
+                      <span className="w-0 h-0.5 bg-[#00aeef] group-hover:w-4 transition-all duration-300"></span>
+                      {item.label}
+                    </Link>
+                  )}
                 </li>
               ))}
             </ul>
@@ -63,21 +86,21 @@ export default function Footer() {
             <h4 className="text-lg font-bold mb-6">Services</h4>
             <ul className="space-y-3">
               {[
-                'Basement Renovations',
-                'Kitchen Remodeling',
-                'Bathroom Upgrades',
-                'Full Home Renovations',
-                'Flooring Installation',
-                'Design Consultation'
+                { label: 'Basement Renovations', href: '/basement-renovation' },
+                { label: 'Kitchen Remodeling', href: '/services' },
+                { label: 'Home Gyms', href: '/services' },
+                { label: 'Full Home Renovations', href: '/home-renovation' },
+                { label: 'Flooring Installation', href: '/services' },
+                { label: 'Design Consultation', href: '/contact' }
               ].map((service) => (
-                <li key={service}>
-                  <a
-                    href="#"
+                <li key={service.label}>
+                  <Link
+                    to={service.href}
                     className="text-gray-400 hover:text-[#00aeef] transition-colors duration-300 flex items-center gap-2 group"
                   >
                     <span className="w-0 h-0.5 bg-[#00aeef] group-hover:w-4 transition-all duration-300"></span>
-                    {service}
-                  </a>
+                    {service.label}
+                  </Link>
                 </li>
               ))}
             </ul>

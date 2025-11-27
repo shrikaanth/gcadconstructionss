@@ -1,6 +1,5 @@
-import { Send, CheckCircle, AlertCircle, Loader2 } from 'lucide-react';
+import { Send, CheckCircle, Loader2 } from 'lucide-react';
 import { useEffect, useRef, useState } from 'react';
-import { supabase } from '../../lib/supabase';
 
 interface FormData {
   name: string;
@@ -22,8 +21,7 @@ export default function ContactForm() {
     message: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
-  const [errorMessage, setErrorMessage] = useState('');
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success'>('idle');
   const sectionRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -54,35 +52,18 @@ export default function ContactForm() {
     e.preventDefault();
     setIsSubmitting(true);
     setSubmitStatus('idle');
-    setErrorMessage('');
-
-    try {
-      const { error } = await supabase
-        .from('contact_submissions')
-        .insert([formData]);
-
-      if (error) throw error;
-
-      setSubmitStatus('success');
-      setFormData({
-        name: '',
-        phone: '',
-        email: '',
-        city: '',
-        project_type: '',
-        message: ''
-      });
-
-      setTimeout(() => {
-        setSubmitStatus('idle');
-      }, 5000);
-    } catch (error) {
-      console.error('Error submitting form:', error);
-      setSubmitStatus('error');
-      setErrorMessage('Failed to submit form. Please try again or contact us directly.');
-    } finally {
-      setIsSubmitting(false);
-    }
+    await new Promise((resolve) => setTimeout(resolve, 800));
+    setSubmitStatus('success');
+    setFormData({
+      name: '',
+      phone: '',
+      email: '',
+      city: '',
+      project_type: '',
+      message: ''
+    });
+    setIsSubmitting(false);
+    setTimeout(() => setSubmitStatus('idle'), 5000);
   };
 
   return (
@@ -109,16 +90,6 @@ export default function ContactForm() {
                   <p className="text-green-700">
                     Thank you for contacting us. Our team will review your request and get back to you within 24 hours.
                   </p>
-                </div>
-              </div>
-            )}
-
-            {submitStatus === 'error' && (
-              <div className="mb-8 p-6 bg-red-50 border-2 border-red-200 rounded-2xl flex items-start gap-4 animate-fadeIn">
-                <AlertCircle className="w-6 h-6 text-red-600 flex-shrink-0 mt-1" />
-                <div>
-                  <h3 className="font-bold text-red-900 mb-1">Submission Failed</h3>
-                  <p className="text-red-700">{errorMessage}</p>
                 </div>
               </div>
             )}

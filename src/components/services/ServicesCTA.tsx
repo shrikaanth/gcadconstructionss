@@ -1,5 +1,6 @@
 import { Calendar, Phone, Mail, ArrowRight, Home } from 'lucide-react';
 import { useEffect, useRef, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 export default function ServicesCTA() {
   const [isVisible, setIsVisible] = useState(false);
@@ -45,17 +46,23 @@ export default function ServicesCTA() {
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-                  <button className="group px-10 py-5 bg-[#00aeef] text-white font-bold text-lg rounded-xl hover:shadow-2xl hover:shadow-[#00aeef]/50 transition-all duration-300 hover:scale-105 inline-flex items-center gap-3">
+                  <Link
+                    to="/basement-renovation"
+                    className="group px-10 py-5 bg-[#00aeef] text-white font-bold text-lg rounded-xl hover:shadow-2xl hover:shadow-[#00aeef]/50 transition-all duration-300 hover:scale-105 inline-flex items-center gap-3"
+                  >
                     <Home className="w-6 h-6" />
                     Book a Free Basement Assessment
                     <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform duration-300" />
-                  </button>
+                  </Link>
 
-                  <button className="group px-10 py-5 bg-white/10 backdrop-blur-sm border-2 border-white text-white font-bold text-lg rounded-xl hover:bg-white/20 transition-all duration-300 hover:scale-105 inline-flex items-center gap-3">
+                  <Link
+                    to="/contact"
+                    className="group px-10 py-5 bg-white/10 backdrop-blur-sm border-2 border-white text-white font-bold text-lg rounded-xl hover:bg-white/20 transition-all duration-300 hover:scale-105 inline-flex items-center gap-3"
+                  >
                     <Calendar className="w-6 h-6" />
                     Schedule Consultation
                     <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform duration-300" />
-                  </button>
+                  </Link>
                 </div>
               </div>
 

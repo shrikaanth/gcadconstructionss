@@ -1,9 +1,10 @@
-import { Hammer, Bath, Home, Bed, Grid, ArrowRight, TrendingUp } from 'lucide-react';
+import { Hammer, Dumbbell, Home, Bed, Grid, ArrowRight, TrendingUp } from 'lucide-react';
 import { useEffect, useRef, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const services = [
   { icon: Hammer, name: 'Kitchens', description: 'Modern, functional kitchen renovations', color: 'from-orange-500 to-red-500' },
-  { icon: Bath, name: 'Bathrooms', description: 'Spa-like bathroom transformations', color: 'from-blue-500 to-cyan-500' },
+  { icon: Dumbbell, name: 'Home Gyms', description: 'Performance-ready workout spaces', color: 'from-blue-500 to-cyan-500' },
   { icon: Home, name: 'Living Spaces', description: 'Open concept living areas', color: 'from-green-500 to-emerald-500' },
   { icon: Bed, name: 'Bedrooms', description: 'Comfortable bedroom upgrades', color: 'from-purple-500 to-pink-500' },
   { icon: Grid, name: 'Flooring Upgrades', description: 'Hardwood, tile, and modern finishes', color: 'from-amber-500 to-yellow-500' },
@@ -16,6 +17,8 @@ const differentiators = [
   'Respect for timelines and clean site management',
   'Transparent pricing before we begin'
 ];
+
+const safetyBadges = ['WSIB Covered', 'Ontario-Approved', 'Licensed & Insured', 'Transparent Pricing'];
 
 export default function HomeRenovation() {
   const [isVisible, setIsVisible] = useState(false);
@@ -126,14 +129,28 @@ export default function HomeRenovation() {
                 ))}
               </div>
 
+              <div className="mb-10 flex flex-wrap justify-center gap-4">
+                {safetyBadges.map((badge, idx) => (
+                  <span
+                    key={idx}
+                    className="px-6 py-3 bg-[#00aeef]/20 border border-[#00aeef]/50 text-[#00aeef] font-semibold rounded-full backdrop-blur-sm hover:bg-[#00aeef]/30 transition-all duration-300"
+                  >
+                    {badge}
+                  </span>
+                ))}
+              </div>
+
               <div className="text-center">
                 <p className="text-2xl text-white font-semibold mb-8">
                   GCAD delivers homes that look modern and feel effortless.
                 </p>
-                <button className="group px-10 py-5 bg-[#00aeef] text-white font-bold text-lg rounded-xl hover:shadow-2xl hover:shadow-[#00aeef]/50 transition-all duration-300 hover:scale-105 inline-flex items-center gap-3">
+                <Link
+                  to="/home-renovation"
+                  className="group px-10 py-5 bg-[#00aeef] text-white font-bold text-lg rounded-xl hover:shadow-2xl hover:shadow-[#00aeef]/50 transition-all duration-300 hover:scale-105 inline-flex items-center gap-3"
+                >
                   View Home Renovation Services
                   <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform duration-300" />
-                </button>
+                </Link>
               </div>
             </div>
           </div>

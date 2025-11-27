@@ -131,14 +131,14 @@ export default function BasementProblem() {
                 The GCAD Difference
               </h3>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-                We've finished 100+ basements across the GTA with this proven package—transparent pricing, quality work, realistic timelines.
+                We've finished 250+ basements across the GTA with this proven package—transparent pricing, quality work, realistic timelines.
               </p>
 
               <div className="grid md:grid-cols-3 gap-6">
                 {[
                   { number: '$47K', label: 'Starting Price' },
                   { number: '4-6', label: 'Weeks Average' },
-                  { number: '100+', label: 'Basements Done' }
+                  { number: '250+', label: 'Basements Done' }
                 ].map((stat, idx) => (
                   <div key={idx} className="p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:bg-white/10 hover:border-[#00aeef]/50 transition-all duration-300">
                     <div className="text-4xl font-bold text-[#00aeef] mb-2">{stat.number}</div>

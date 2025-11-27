@@ -46,11 +46,11 @@ export default function WhyChoose() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="py-24 bg-white relative overflow-hidden">
+    <section ref={sectionRef} className="py-16 md:py-20 bg-white relative overflow-hidden">
       <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#00aeef] to-transparent"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+        <div className={`text-center mb-10 md:mb-12 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             Why Homeowners Choose <span className="text-[#00aeef]">GCAD</span>
           </h2>
@@ -63,13 +63,13 @@ export default function WhyChoose() {
           </div>
         </div>
 
-        <div className={`max-w-4xl mx-auto mb-16 transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+        <div className={`max-w-4xl mx-auto mb-10 md:mb-12 transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <p className="text-xl text-gray-700 text-center leading-relaxed">
             We offer a straightforward, well-managed, transparent renovation experience backed by a team that values your time and your home.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 mb-16">
+        <div className="grid md:grid-cols-2 gap-8 mb-12 md:mb-14">
           {features.map((feature, index) => {
             const Icon = feature.icon;
             return (
@@ -97,14 +97,14 @@ export default function WhyChoose() {
         </div>
 
         <div className={`relative transition-all duration-1000 delay-700 ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}>
-          <div className="bg-gradient-to-r from-[#00aeef] to-cyan-500 rounded-3xl p-12 text-center relative overflow-hidden">
+          <div className="bg-gradient-to-r from-[#00aeef] to-cyan-500 rounded-3xl p-10 md:p-12 text-center relative overflow-hidden">
             <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0zNiAxOGMtNi42MjcgMC0xMiA1LjM3My0xMiAxMnM1LjM3MyAxMiAxMiAxMiAxMi01LjM3MyAxMi0xMi01LjM3My0xMi0xMi0xMnptMCAyMmMtNS41MjMgMC0xMC00LjQ3Ny0xMC0xMHM0LjQ3Ny0xMCAxMC0xMCAxMCA0LjQ3NyAxMCAxMC00LjQ3NyAxMC0xMCAxMHoiIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4xIi8+PC9nPjwvc3ZnPg==')] opacity-30"></div>
             <div className="relative z-10">
               <p className="text-3xl md:text-4xl font-bold text-white mb-4">
                 GCAD is not the "renovation guy."
               </p>
               <p className="text-3xl md:text-4xl font-bold text-white">
-                GCAD is a <span className="border-b-4 border-white">renovation partner</span>.
+                GCAD is a <span className="text-[#FCD34D]">Renovation Partner</span>.
               </p>
             </div>
           </div>
