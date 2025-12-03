@@ -8,6 +8,7 @@ import ServicesCTA from '../components/services/ServicesCTA';
 import AboutCTA from '../components/about/AboutCTA';
 import Footer from '../components/Footer';
 import WhatsAppButton from '../components/WhatsAppButton';
+import CallButton from '../components/CallButton';
 
 export default function ServicesPage() {
   return (
@@ -23,6 +24,7 @@ export default function ServicesPage() {
         <AboutCTA />
       </main>
       <Footer />
+      <CallButton />
       <WhatsAppButton />
     </div>
   );

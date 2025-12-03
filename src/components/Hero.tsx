@@ -1,7 +1,6 @@
 import { ArrowRight, CheckCircle } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { SITE_IMAGES } from '../lib/siteImages';
 import HeroQuickForm from './HeroQuickForm';
 
 export default function Hero() {
@@ -13,13 +12,24 @@ export default function Hero() {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-slate-900">
-      <div
-        className="absolute inset-0 bg-cover bg-center"
-        aria-hidden="true"
-        style={{ backgroundImage: `url(${SITE_IMAGES.openConceptLiving.url})` }}
-      ></div>
+      {/* Video Background */}
+      <div className="absolute inset-0 w-full h-full overflow-hidden">
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
+        >
+          <source
+            src="https://ik.imagekit.io/6397z4kdz/large-house-living-room-area-2025-08-28-20-30-00-utc.mp4"
+            type="video/mp4"
+          />
+        </video>
+        {/* Dark overlay for text readability */}
+        <div className="absolute inset-0 bg-slate-900/70"></div>
+      </div>
 
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-950/90 via-slate-900/85 to-slate-950/80"></div>
       <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0zNiAxOGMtNi42MjcgMC0xMiA1LjM3My0xMiAxMnM1LjM3MyAxMiAxMiAxMiAxMi01LjM3MyAxMi0xMi01LjM3My0xMi0xMi0xMnptMCAyMmMtNS41MjMgMC0xMC00LjQ3Ny0xMC0xMHM0LjQ3Ny0xMCAxMC0xMCAxMCA0LjQ3NyAxMCAxMC00LjQ3NyAxMC0xMCAxMHoiIGZpbGw9IiMwMGFlZWYiIGZpbGwtb3BhY2l0eT0iMC4wNSIvPjwvZz48L3N2Zz4=')] opacity-40 mix-blend-overlay"></div>
 
       <div
@@ -50,9 +60,9 @@ export default function Hero() {
             </div>
 
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
-              Ontario’s Leading{' '}
+              Ontario's Leading{' '}
               <span className="text-[#00aeef] inline-block hover:scale-105 transition-transform duration-300">
-                Basement Renovation
+                Basement & Renovation
               </span>{' '}
               Specialists
             </h1>

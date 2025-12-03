@@ -6,6 +6,7 @@ import OurValues from '../components/about/OurValues';
 import AboutCTA from '../components/about/AboutCTA';
 import Footer from '../components/Footer';
 import WhatsAppButton from '../components/WhatsAppButton';
+import CallButton from '../components/CallButton';
 
 export default function AboutPage() {
   return (
@@ -19,6 +20,7 @@ export default function AboutPage() {
         <AboutCTA />
       </main>
       <Footer />
+      <CallButton />
       <WhatsAppButton />
     </div>
   );

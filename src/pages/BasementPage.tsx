@@ -10,6 +10,7 @@ import BasementFAQ from '../components/basement/BasementFAQ';
 import AboutCTA from '../components/about/AboutCTA';
 import Footer from '../components/Footer';
 import WhatsAppButton from '../components/WhatsAppButton';
+import CallButton from '../components/CallButton';
 
 export default function BasementPage() {
   return (
@@ -27,6 +28,7 @@ export default function BasementPage() {
         <AboutCTA />
       </main>
       <Footer />
+      <CallButton />
       <WhatsAppButton />
     </div>
   );

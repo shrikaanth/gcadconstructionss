@@ -4,6 +4,7 @@ import ServiceArea from '../components/contact/ServiceArea';
 import AboutCTA from '../components/about/AboutCTA';
 import Footer from '../components/Footer';
 import WhatsAppButton from '../components/WhatsAppButton';
+import CallButton from '../components/CallButton';
 
 export default function ContactPage() {
   return (
@@ -15,6 +16,7 @@ export default function ContactPage() {
         <AboutCTA />
       </main>
       <Footer />
+      <CallButton />
       <WhatsAppButton />
     </div>
   );

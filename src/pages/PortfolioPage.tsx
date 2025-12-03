@@ -3,6 +3,7 @@ import Portfolio from '../components/Portfolio';
 import AboutCTA from '../components/about/AboutCTA';
 import Footer from '../components/Footer';
 import WhatsAppButton from '../components/WhatsAppButton';
+import CallButton from '../components/CallButton';
 
 export default function PortfolioPage() {
   return (
@@ -15,6 +16,7 @@ export default function PortfolioPage() {
         <AboutCTA />
       </main>
       <Footer />
+      <CallButton />
       <WhatsAppButton />
     </div>
   );

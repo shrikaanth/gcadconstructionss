@@ -2,10 +2,11 @@ import Header from '../components/Header';
 import HomeRenovationHero from '../components/home-renovation/HomeRenovationHero';
 import TransformationGallery from '../components/home-renovation/TransformationGallery';
 import RenovationProcess from '../components/home-renovation/RenovationProcess';
-import HomeRenovationCTA from '../components/home-renovation/HomeRenovationCTA';
+import Testimonials from '../components/Testimonials';
 import AboutCTA from '../components/about/AboutCTA';
 import Footer from '../components/Footer';
 import WhatsAppButton from '../components/WhatsAppButton';
+import CallButton from '../components/CallButton';
 
 export default function HomeRenovationPage() {
   return (
@@ -15,10 +16,11 @@ export default function HomeRenovationPage() {
         <HomeRenovationHero />
         <TransformationGallery />
         <RenovationProcess />
-        <HomeRenovationCTA />
+        <Testimonials />
         <AboutCTA />
       </main>
       <Footer />
+      <CallButton />
       <WhatsAppButton />
     </div>
   );

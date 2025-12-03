@@ -9,6 +9,7 @@ import FinalCTA from '../components/FinalCTA';
 import AboutCTA from '../components/about/AboutCTA';
 import Footer from '../components/Footer';
 import WhatsAppButton from '../components/WhatsAppButton';
+import CallButton from '../components/CallButton';
 
 export default function HomeUpdatedPage() {
   return (
@@ -37,6 +38,7 @@ export default function HomeUpdatedPage() {
         <AboutCTA />
       </main>
       <Footer />
+      <CallButton />
       <WhatsAppButton />
     </div>
   );

@@ -8,6 +8,7 @@ import Testimonials from './components/Testimonials';
 import AboutCTA from './components/about/AboutCTA';
 import Footer from './components/Footer';
 import WhatsAppButton from './components/WhatsAppButton';
+import CallButton from './components/CallButton';
 
 function App() {
   return (
@@ -33,6 +34,7 @@ function App() {
         <AboutCTA />
       </main>
       <Footer />
+      <CallButton />
       <WhatsAppButton />
     </div>
   );
