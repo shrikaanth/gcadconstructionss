@@ -1,29 +1,30 @@
 import { MapPin } from 'lucide-react';
 import { useEffect, useRef, useState } from 'react';
+import { SITE_IMAGES } from '../../lib/siteImages';
 
 const projects = [
   {
     title: 'Modern Family Basement',
     location: 'Mississauga',
-    image: 'https://images.pexels.com/photos/1648776/pexels-photo-1648776.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: SITE_IMAGES.basementLounge,
     features: ['Home office', 'Play area', 'Guest room']
   },
   {
     title: 'Entertainment Suite',
     location: 'Brampton',
-    image: 'https://images.pexels.com/photos/1457842/pexels-photo-1457842.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: SITE_IMAGES.sunlitSittingRoom,
     features: ['Home theater', 'Wet bar', 'Bathroom']
   },
   {
     title: 'Basement Apartment',
     location: 'Scarborough',
-    image: 'https://images.pexels.com/photos/1571471/pexels-photo-1571471.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: SITE_IMAGES.hallwayNook,
     features: ['Legal suite', 'Kitchen', 'Separate entrance']
   },
   {
     title: 'Gym & Recreation',
     location: 'Oakville',
-    image: 'https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: SITE_IMAGES.modernStaircase,
     features: ['Home gym', 'Kids zone', 'Storage']
   }
 ];
@@ -77,11 +78,12 @@ export default function BasementGallery() {
             >
               <div className="relative aspect-[4/3] overflow-hidden">
                 <img
-                  src={project.image}
-                  alt={project.title}
+                  src={project.image.url}
+                  alt={project.image.alt}
                   className={`w-full h-full object-cover transition-all duration-700 ${
                     activeProject === idx ? 'scale-110' : 'scale-100'
                   }`}
+                  loading="lazy"
                 />
 
                 <div className={`absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent transition-opacity duration-500 ${

@@ -106,7 +106,34 @@ export default function FinalCTA() {
           </div>
         </div>
 
-        <div className={`mt-16 text-center transition-all duration-1000 delay-600 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+        <div
+          className={`mt-16 text-center transition-all duration-1000 delay-500 ${
+            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+          }`}
+        >
+          <div className="inline-block rounded-3xl border border-white/10 bg-white/5 backdrop-blur-sm px-10 py-8">
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#00aeef] mb-5">
+              What Happens Next?
+            </p>
+            <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-4">
+              {['Free Assessment', 'Get Clear Quote', 'Approve Design', 'Start Building'].map(
+                (step, idx) => (
+                  <div
+                    key={step}
+                    className="flex flex-col items-center gap-3 rounded-2xl border border-white/10 bg-slate-900/70 px-6 py-6"
+                  >
+                    <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#00aeef]/15 text-lg font-semibold text-[#00aeef]">
+                      {idx + 1}
+                    </div>
+                    <p className="text-sm font-medium text-white/90">{step}</p>
+                  </div>
+                )
+              )}
+            </div>
+          </div>
+        </div>
+
+        <div className={`mt-16 text-center transition-all duration-1000 delay-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <div className="inline-flex flex-wrap items-center justify-center gap-4">
             <span className="text-gray-400">Trusted by families in:</span>
             {['Toronto', 'Mississauga', 'Brampton', 'Scarborough', 'Oakville', 'Markham'].map((city, idx) => (

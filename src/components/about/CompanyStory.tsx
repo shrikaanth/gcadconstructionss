@@ -9,6 +9,9 @@ const achievements = [
   { icon: CheckCircle, text: 'Clean and detail-oriented', color: 'from-cyan-500 to-blue-500' }
 ];
 
+const PROJECT_TARGET = 250;
+const PROJECT_INCREMENT = 5;
+
 export default function CompanyStory() {
   const [isVisible, setIsVisible] = useState(false);
   const [count, setCount] = useState(0);
@@ -32,9 +35,9 @@ export default function CompanyStory() {
   }, []);
 
   useEffect(() => {
-    if (isVisible && count < 100) {
+    if (isVisible && count < PROJECT_TARGET) {
       const timer = setTimeout(() => {
-        setCount(prev => Math.min(prev + 2, 100));
+        setCount(prev => Math.min(prev + PROJECT_INCREMENT, PROJECT_TARGET));
       }, 20);
       return () => clearTimeout(timer);
     }

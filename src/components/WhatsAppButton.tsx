@@ -1,7 +1,6 @@
-import { MessageCircle } from 'lucide-react';
-
 const WHATSAPP_NUMBER = '14372558805';
 const WHATSAPP_MESSAGE = encodeURIComponent('Hi GCAD team! I’d like to discuss a renovation project.');
+const whatsappIcon = new URL('../../WhatsApp.svg.webp', import.meta.url).href;
 
 export default function WhatsAppButton() {
   const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MESSAGE}`;
@@ -14,8 +13,8 @@ export default function WhatsAppButton() {
       className="fixed bottom-6 right-6 z-50 group"
       aria-label="Chat with GCAD on WhatsApp"
     >
-      <div className="h-14 w-14 rounded-full bg-gradient-to-br from-[#25d366] to-[#128c7e] text-white shadow-xl shadow-[#128c7e]/30 hover:shadow-2xl hover:shadow-[#128c7e]/50 transition-all duration-300 group-hover:scale-105 flex items-center justify-center">
-        <MessageCircle className="w-6 h-6" />
+      <div className="h-14 w-14 rounded-full bg-gradient-to-br from-[#25d366] to-[#128c7e] shadow-xl shadow-[#128c7e]/30 hover:shadow-2xl hover:shadow-[#128c7e]/50 transition-all duration-300 group-hover:scale-105 flex items-center justify-center overflow-hidden animate-shake">
+        <img src={whatsappIcon} alt="" className="h-9 w-9 object-contain" />
       </div>
     </a>
   );

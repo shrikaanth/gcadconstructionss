@@ -7,7 +7,7 @@ import BasementPackage from '../components/BasementPackage';
 import BasementGallery from '../components/basement/BasementGallery';
 import BasementTestimonials from '../components/basement/BasementTestimonials';
 import BasementFAQ from '../components/basement/BasementFAQ';
-import BasementCTA from '../components/basement/BasementCTA';
+import AboutCTA from '../components/about/AboutCTA';
 import Footer from '../components/Footer';
 import WhatsAppButton from '../components/WhatsAppButton';
 
@@ -24,7 +24,7 @@ export default function BasementPage() {
         <BasementGallery />
         <BasementTestimonials />
         <BasementFAQ />
-        <BasementCTA />
+        <AboutCTA />
       </main>
       <Footer />
       <WhatsAppButton />

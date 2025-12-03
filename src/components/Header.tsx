@@ -25,12 +25,13 @@ export default function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
+      setIsScrolled(window.scrollY > 50 || location.pathname !== '/');
     };
 
     window.addEventListener('scroll', handleScroll);
+    handleScroll();
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [location.pathname]);
 
   const handleNavClick = (href: string, type: string) => {
     setIsMobileMenuOpen(false);
@@ -112,17 +113,23 @@ export default function Header() {
                         </span>
                       </Link>
                       {isServicesOpen && (
-                        <div className="absolute left-0 mt-2 w-56 bg-white rounded-xl shadow-2xl border border-gray-100 py-2 z-50">
-                          {serviceLinks.map((service) => (
-                            <Link
-                              key={service.name}
-                              to={service.href}
-                              className="flex items-center gap-2 px-4 py-3 text-gray-700 hover:text-[#00aeef] hover:bg-gray-50 transition-all duration-200"
-                            >
-                              <span className="inline-block w-1.5 h-1.5 rounded-full bg-[#00aeef]"></span>
-                              {service.name}
-                            </Link>
-                          ))}
+                        <div
+                          className="absolute left-0 top-full pt-3 z-50"
+                          onMouseEnter={() => setIsServicesOpen(true)}
+                          onMouseLeave={() => setIsServicesOpen(false)}
+                        >
+                          <div className="w-56 bg-white rounded-xl shadow-2xl border border-gray-100 py-2">
+                            {serviceLinks.map((service) => (
+                              <Link
+                                key={service.name}
+                                to={service.href}
+                                className="flex items-center gap-2 px-4 py-3 text-gray-700 hover:text-[#00aeef] hover:bg-gray-50 transition-all duration-200"
+                              >
+                                <span className="inline-block w-1.5 h-1.5 rounded-full bg-[#00aeef]"></span>
+                                {service.name}
+                              </Link>
+                            ))}
+                          </div>
                         </div>
                       )}
                     </div>

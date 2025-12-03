@@ -9,6 +9,10 @@ interface FormData {
   project_type: string;
 }
 
+interface HeroQuickFormProps {
+  className?: string;
+}
+
 const projectOptions = [
   { label: 'Basement Renovation', value: 'Basement Renovation' },
   { label: 'Home Renovation', value: 'Home Renovation' },
@@ -18,7 +22,8 @@ const projectOptions = [
   { label: 'Other', value: 'Other' }
 ];
 
-export default function HeroQuickForm() {
+export default function HeroQuickForm(props: HeroQuickFormProps = {}) {
+  const { className } = props;
   const [formData, setFormData] = useState<FormData>({
     name: '',
     email: '',
@@ -51,8 +56,10 @@ export default function HeroQuickForm() {
   };
 
   return (
-    <div className="relative bg-white/10 backdrop-blur-xl border border-white/10 rounded-3xl p-6 sm:p-8 text-left">
-      <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent rounded-3xl pointer-events-none"></div>
+    <div
+      className={`relative bg-slate-950/80 backdrop-blur-xl border border-white/5 rounded-3xl p-6 sm:p-8 text-left shadow-2xl shadow-black/40 ${className ?? ''}`}
+    >
+      <div className="absolute inset-0 bg-gradient-to-br from-slate-800/40 via-slate-900/30 to-transparent rounded-3xl pointer-events-none"></div>
       <div className="relative z-10 space-y-6">
         <div>
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/20 text-white/90 text-xs uppercase tracking-wide">
@@ -79,7 +86,7 @@ export default function HeroQuickForm() {
         <form onSubmit={handleSubmit} className="space-y-4">
           <div className="grid sm:grid-cols-2 gap-4">
             <label className="block">
-              <span className="text-xs font-semibold uppercase tracking-wide text-gray-200 mb-2 block">
+              <span className="text-xs font-semibold uppercase tracking-wide text-gray-300 mb-2 block">
                 Full Name *
               </span>
               <div className="relative flex items-center">
@@ -90,13 +97,13 @@ export default function HeroQuickForm() {
                   onChange={handleChange}
                   required
                   placeholder="Jane Doe"
-                  className="w-full rounded-xl border border-white/20 bg-white/5 px-4 py-3 text-white placeholder:text-gray-400 focus:border-[#00aeef] focus:ring-2 focus:ring-[#00aeef]/30 outline-none transition-all"
+                  className="w-full rounded-xl border border-white/10 bg-slate-800/70 px-4 py-3 text-white placeholder:text-gray-400/80 focus:border-[#00aeef] focus:ring-2 focus:ring-[#00aeef]/30 outline-none transition-all"
                 />
               </div>
             </label>
 
             <label className="block">
-              <span className="text-xs font-semibold uppercase tracking-wide text-gray-200 mb-2 block">
+              <span className="text-xs font-semibold uppercase tracking-wide text-gray-300 mb-2 block">
                 Phone Number *
               </span>
               <div className="relative">
@@ -110,7 +117,7 @@ export default function HeroQuickForm() {
                   onChange={handleChange}
                   required
                   placeholder="+1 (437) 255-8805"
-                  className="w-full rounded-xl border border-white/20 bg-white/5 pl-10 pr-4 py-3 text-white placeholder:text-gray-400 focus:border-[#00aeef] focus:ring-2 focus:ring-[#00aeef]/30 outline-none transition-all"
+                  className="w-full rounded-xl border border-white/10 bg-slate-800/70 pl-10 pr-4 py-3 text-white placeholder:text-gray-400/80 focus:border-[#00aeef] focus:ring-2 focus:ring-[#00aeef]/30 outline-none transition-all"
                 />
               </div>
             </label>
@@ -118,7 +125,7 @@ export default function HeroQuickForm() {
 
           <div className="grid sm:grid-cols-2 gap-4">
             <label className="block">
-              <span className="text-xs font-semibold uppercase tracking-wide text-gray-200 mb-2 block">
+              <span className="text-xs font-semibold uppercase tracking-wide text-gray-300 mb-2 block">
                 Email *
               </span>
               <div className="relative">
@@ -132,13 +139,13 @@ export default function HeroQuickForm() {
                   onChange={handleChange}
                   required
                   placeholder="you@example.com"
-                  className="w-full rounded-xl border border-white/20 bg-white/5 pl-10 pr-4 py-3 text-white placeholder:text-gray-400 focus:border-[#00aeef] focus:ring-2 focus:ring-[#00aeef]/30 outline-none transition-all"
+                  className="w-full rounded-xl border border-white/10 bg-slate-800/70 pl-10 pr-4 py-3 text-white placeholder:text-gray-400/80 focus:border-[#00aeef] focus:ring-2 focus:ring-[#00aeef]/30 outline-none transition-all"
                 />
               </div>
             </label>
 
             <label className="block">
-              <span className="text-xs font-semibold uppercase tracking-wide text-gray-200 mb-2 block">
+              <span className="text-xs font-semibold uppercase tracking-wide text-gray-300 mb-2 block">
                 City
               </span>
               <div className="relative">
@@ -151,21 +158,21 @@ export default function HeroQuickForm() {
                   value={formData.city}
                   onChange={handleChange}
                   placeholder="Toronto"
-                  className="w-full rounded-xl border border-white/20 bg-white/5 pl-10 pr-4 py-3 text-white placeholder:text-gray-400 focus:border-[#00aeef] focus:ring-2 focus:ring-[#00aeef]/30 outline-none transition-all"
+                  className="w-full rounded-xl border border-white/10 bg-slate-800/70 pl-10 pr-4 py-3 text-white placeholder:text-gray-400/80 focus:border-[#00aeef] focus:ring-2 focus:ring-[#00aeef]/30 outline-none transition-all"
                 />
               </div>
             </label>
           </div>
 
           <label className="block">
-            <span className="text-xs font-semibold uppercase tracking-wide text-gray-200 mb-2 block">
+            <span className="text-xs font-semibold uppercase tracking-wide text-gray-300 mb-2 block">
               Project Type
             </span>
             <select
               name="project_type"
               value={formData.project_type}
               onChange={handleChange}
-              className="w-full rounded-xl border border-white/20 bg-white/5 px-4 py-3 text-white focus:border-[#00aeef] focus:ring-2 focus:ring-[#00aeef]/30 outline-none transition-all"
+              className="w-full rounded-xl border border-white/10 bg-slate-800/70 px-4 py-3 text-white focus:border-[#00aeef] focus:ring-2 focus:ring-[#00aeef]/30 outline-none transition-all"
             >
               <option value="" className="text-gray-700">
                 Select an option

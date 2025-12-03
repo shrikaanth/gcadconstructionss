@@ -122,33 +122,6 @@ export default function BasementProblem() {
           </div>
         </div>
 
-        <div className={`mt-16 transition-all duration-1000 delay-600 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <div className="bg-gradient-to-br from-gray-900 to-gray-800 rounded-3xl p-12 text-center relative overflow-hidden">
-            <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0zNiAxOGMtNi42MjcgMC0xMiA1LjM3My0xMiAxMnM1LjM3MyAxMiAxMiAxMiAxMi01LjM3MyAxMi0xMi01LjM3My0xMi0xMi0xMnptMCAyMmMtNS41MjMgMC0xMC00LjQ3Ny0xMC0xMHM0LjQ3Ny0xMCAxMC0xMCAxMCA0LjQ3NyAxMCAxMC00LjQ3NyAxMC0xMCAxMHoiIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wNSIvPjwvZz48L3N2Zz4=')] opacity-30"></div>
-
-            <div className="relative z-10">
-              <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                The GCAD Difference
-              </h3>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-                We've finished 250+ basements across the GTA with this proven package—transparent pricing, quality work, realistic timelines.
-              </p>
-
-              <div className="grid md:grid-cols-3 gap-6">
-                {[
-                  { number: '$47K', label: 'Starting Price' },
-                  { number: '4-6', label: 'Weeks Average' },
-                  { number: '250+', label: 'Basements Done' }
-                ].map((stat, idx) => (
-                  <div key={idx} className="p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:bg-white/10 hover:border-[#00aeef]/50 transition-all duration-300">
-                    <div className="text-4xl font-bold text-[#00aeef] mb-2">{stat.number}</div>
-                    <div className="text-white/80">{stat.label}</div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );

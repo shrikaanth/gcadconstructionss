@@ -1,5 +1,6 @@
 import { Check } from 'lucide-react';
 import { useEffect, useRef, useState } from 'react';
+import { SITE_IMAGES } from '../../lib/siteImages';
 
 const renovationTypes = [
   {
@@ -8,7 +9,7 @@ const renovationTypes = [
     icon: '🍳',
     features: ['Cabinets', 'Countertops', 'Backsplashes', 'Flooring', 'Lighting'],
     color: 'from-orange-500 to-red-500',
-    image: 'https://images.pexels.com/photos/2724749/pexels-photo-2724749.jpeg?auto=compress&cs=tinysrgb&w=800'
+    image: SITE_IMAGES.modernKitchenIsland
   },
   {
     title: 'Bathroom Upgrades',
@@ -16,7 +17,7 @@ const renovationTypes = [
     icon: '🛁',
     features: ['Tiles', 'Vanities', 'Fixtures', 'Walk-in showers', 'Heated floors'],
     color: 'from-blue-500 to-cyan-500',
-    image: 'https://images.pexels.com/photos/1457842/pexels-photo-1457842.jpeg?auto=compress&cs=tinysrgb&w=800'
+    image: SITE_IMAGES.spaBathroomRetreat
   },
   {
     title: 'Living & Bedroom Spaces',
@@ -24,7 +25,7 @@ const renovationTypes = [
     icon: '🛋️',
     features: ['Walls', 'Flooring', 'Trims', 'Doors', 'Feature elements'],
     color: 'from-purple-500 to-pink-500',
-    image: 'https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=800'
+    image: SITE_IMAGES.sunlitSittingRoom
   },
   {
     title: 'Full Home Makeovers',
@@ -32,7 +33,7 @@ const renovationTypes = [
     icon: '🏠',
     features: ['Open concept', 'Consistent flow', 'Premium finishes', 'Smart layouts', 'Modern touches'],
     color: 'from-green-500 to-emerald-500',
-    image: 'https://images.pexels.com/photos/1571471/pexels-photo-1571471.jpeg?auto=compress&cs=tinysrgb&w=800'
+    image: SITE_IMAGES.grandFoyer
   }
 ];
 
@@ -95,11 +96,12 @@ export default function RenovationTypes() {
                     className={`relative h-80 lg:h-auto overflow-hidden ${idx % 2 === 1 ? 'lg:col-start-2' : ''}`}
                   >
                     <img
-                      src={type.image}
-                      alt={type.title}
+                      src={type.image.url}
+                      alt={type.image.alt}
                       className={`w-full h-full object-cover transition-transform duration-700 ${
                         activeType === idx ? 'scale-110' : 'scale-100'
                       }`}
+                      loading="lazy"
                     />
                     <div
                       className={`absolute inset-0 bg-gradient-to-br ${type.color} opacity-20 transition-opacity duration-500 ${

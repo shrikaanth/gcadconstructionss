@@ -1,6 +1,5 @@
 import { Building2, Phone, Mail, MapPin, Facebook, Instagram, Linkedin } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import ContactForm from './contact/ContactForm';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -8,10 +7,6 @@ export default function Footer() {
   return (
     <footer className="bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 space-y-16">
-        <div className="bg-white text-gray-900 rounded-3xl shadow-2xl p-6 sm:p-8 md:p-12">
-          <ContactForm />
-        </div>
-
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
           <div>
             <Link to="/" className="flex items-center gap-3 mb-6 group">
@@ -115,7 +110,12 @@ export default function Footer() {
                 </div>
                 <div>
                   <p className="text-sm text-gray-400">Phone</p>
-                  <p className="text-white font-semibold">+1 (437) 255-8805</p>
+                  <a
+                    href="tel:+14372558805"
+                    className="text-white font-semibold hover:text-[#00aeef] transition-colors duration-300"
+                  >
+                    +1 (437) 255-8805
+                  </a>
                 </div>
               </div>
 
@@ -125,7 +125,12 @@ export default function Footer() {
                 </div>
                 <div>
                   <p className="text-sm text-gray-400">Email</p>
-                  <p className="text-white font-semibold">info@gcadconstruction.com</p>
+                  <a
+                    href="mailto:info@gcadconstruction.com"
+                    className="text-white font-semibold hover:text-[#00aeef] transition-colors duration-300"
+                  >
+                    info@gcadconstruction.com
+                  </a>
                 </div>
               </div>
 
@@ -135,7 +140,12 @@ export default function Footer() {
                 </div>
                 <div>
                   <p className="text-sm text-gray-400">Service Area</p>
-                  <p className="text-white font-semibold">Greater Toronto Area</p>
+                  <a
+                    href="/contact#service-area"
+                    className="text-white font-semibold hover:text-[#00aeef] transition-colors duration-300"
+                  >
+                    Greater Toronto Area
+                  </a>
                 </div>
               </div>
             </div>

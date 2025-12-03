@@ -2,7 +2,6 @@ import Header from '../components/Header';
 import AboutHero from '../components/about/AboutHero';
 import CompanyStory from '../components/about/CompanyStory';
 import OurApproach from '../components/about/OurApproach';
-import CoreServices from '../components/about/CoreServices';
 import OurValues from '../components/about/OurValues';
 import AboutCTA from '../components/about/AboutCTA';
 import Footer from '../components/Footer';
@@ -16,7 +15,6 @@ export default function AboutPage() {
         <AboutHero />
         <CompanyStory />
         <OurApproach />
-        <CoreServices />
         <OurValues />
         <AboutCTA />
       </main>

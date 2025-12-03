@@ -1,6 +1,7 @@
 import { ArrowRight, CheckCircle } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { SITE_IMAGES } from '../lib/siteImages';
 import HeroQuickForm from './HeroQuickForm';
 
 export default function Hero() {
@@ -13,8 +14,9 @@ export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-slate-900">
       <div
-        className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1800&q=80')] bg-cover bg-center"
+        className="absolute inset-0 bg-cover bg-center"
         aria-hidden="true"
+        style={{ backgroundImage: `url(${SITE_IMAGES.openConceptLiving.url})` }}
       ></div>
 
       <div className="absolute inset-0 bg-gradient-to-br from-slate-950/90 via-slate-900/85 to-slate-950/80"></div>

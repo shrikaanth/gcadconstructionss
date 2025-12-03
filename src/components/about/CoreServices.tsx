@@ -1,6 +1,7 @@
 import { Home, Wrench, ArrowRight } from 'lucide-react';
 import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { SITE_IMAGES } from '../../lib/siteImages';
 
 const services = [
   {
@@ -14,7 +15,7 @@ const services = [
       'Optional upgrades available'
     ],
     color: 'from-blue-500 to-cyan-500',
-    image: 'https://images.pexels.com/photos/1648776/pexels-photo-1648776.jpeg?auto=compress&cs=tinysrgb&w=800'
+    image: SITE_IMAGES.basementLounge
   },
   {
     icon: Wrench,
@@ -27,7 +28,7 @@ const services = [
       'Custom interior design'
     ],
     color: 'from-purple-500 to-pink-500',
-    image: 'https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=800'
+    image: SITE_IMAGES.sunlitSittingRoom
   }
 ];
 
@@ -88,11 +89,12 @@ export default function CoreServices() {
                   <div className="grid lg:grid-cols-2 gap-0">
                     <div className="relative h-80 lg:h-auto overflow-hidden">
                       <img
-                        src={service.image}
-                        alt={service.title}
+                        src={service.image.url}
+                        alt={service.image.alt}
                         className={`w-full h-full object-cover transition-transform duration-700 ${
                           activeService === idx ? 'scale-110' : 'scale-100'
                         }`}
+                        loading="lazy"
                       />
                       <div className={`absolute inset-0 bg-gradient-to-r ${service.color} opacity-20 transition-opacity duration-500 ${
                         activeService === idx ? 'opacity-30' : 'opacity-20'

@@ -5,6 +5,7 @@ import BasementRenovation from '../components/services/BasementRenovation';
 import HomeRenovationService from '../components/services/HomeRenovationService';
 import ServiceBenefits from '../components/services/ServiceBenefits';
 import ServicesCTA from '../components/services/ServicesCTA';
+import AboutCTA from '../components/about/AboutCTA';
 import Footer from '../components/Footer';
 import WhatsAppButton from '../components/WhatsAppButton';
 
@@ -19,6 +20,7 @@ export default function ServicesPage() {
         <HomeRenovationService />
         <ServiceBenefits />
         <ServicesCTA />
+        <AboutCTA />
       </main>
       <Footer />
       <WhatsAppButton />

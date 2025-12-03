@@ -5,7 +5,7 @@ import BasementPackage from './components/BasementPackage';
 import HomeRenovation from './components/HomeRenovation';
 import Portfolio from './components/Portfolio';
 import Testimonials from './components/Testimonials';
-import FinalCTA from './components/FinalCTA';
+import AboutCTA from './components/about/AboutCTA';
 import Footer from './components/Footer';
 import WhatsAppButton from './components/WhatsAppButton';
 
@@ -30,9 +30,7 @@ function App() {
           <Portfolio />
         </div>
         <Testimonials />
-        <div id="contact">
-          <FinalCTA />
-        </div>
+        <AboutCTA />
       </main>
       <Footer />
       <WhatsAppButton />

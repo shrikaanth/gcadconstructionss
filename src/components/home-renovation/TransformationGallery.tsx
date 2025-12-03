@@ -1,28 +1,29 @@
 import { ArrowRight } from 'lucide-react';
 import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { SITE_IMAGES } from '../../lib/siteImages';
 
 const transformations = [
   {
-    title: 'Modern Kitchen Renovation',
+    title: 'Open Concept Kitchen Overhaul',
     location: 'Toronto',
-    before: 'https://images.pexels.com/photos/534151/pexels-photo-534151.jpeg?auto=compress&cs=tinysrgb&w=400',
-    after: 'https://images.pexels.com/photos/2724749/pexels-photo-2724749.jpeg?auto=compress&cs=tinysrgb&w=800',
-    description: 'Complete kitchen transformation with custom cabinets and quartz countertops'
+    before: SITE_IMAGES.hallwayNook,
+    after: SITE_IMAGES.modernKitchenIsland,
+    description: 'Removing partition walls, extending cabinetry, and adding a waterfall island for effortless entertaining.'
   },
   {
     title: 'Luxury Bathroom Update',
     location: 'Mississauga',
-    before: 'https://images.pexels.com/photos/1457847/pexels-photo-1457847.jpeg?auto=compress&cs=tinysrgb&w=400',
-    after: 'https://images.pexels.com/photos/1457842/pexels-photo-1457842.jpeg?auto=compress&cs=tinysrgb&w=800',
-    description: 'Spa-inspired bathroom with walk-in shower and heated floors'
+    before: SITE_IMAGES.bedroomSanctuary,
+    after: SITE_IMAGES.spaBathroomRetreat,
+    description: 'Converting a dated ensuite into a spa-grade retreat with freestanding tub, marble tile, and layered lighting.'
   },
   {
-    title: 'Open Concept Living',
+    title: 'Lower Level Family Retreat',
     location: 'Brampton',
-    before: 'https://images.pexels.com/photos/1648768/pexels-photo-1648768.jpeg?auto=compress&cs=tinysrgb&w=400',
-    after: 'https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=800',
-    description: 'Wall removal creating bright, open living and dining space'
+    before: SITE_IMAGES.openConceptLiving,
+    after: SITE_IMAGES.basementLounge,
+    description: 'Reimagining unused square footage into a warm, multi-purpose basement for movie nights and guests.'
   }
 ];
 
@@ -75,9 +76,10 @@ export default function TransformationGallery() {
                       BEFORE
                     </div>
                     <img
-                      src={project.before}
-                      alt={`${project.title} before`}
+                      src={project.before.url}
+                      alt={`${project.title} before renovation`}
                       className="w-full h-80 object-cover rounded-2xl group-hover:scale-105 transition-transform duration-500"
+                      loading="lazy"
                     />
                   </div>
 
@@ -86,9 +88,10 @@ export default function TransformationGallery() {
                       AFTER
                     </div>
                     <img
-                      src={project.after}
-                      alt={`${project.title} after`}
+                      src={project.after.url}
+                      alt={`${project.title} after renovation`}
                       className="w-full h-80 object-cover rounded-2xl group-hover:scale-105 transition-transform duration-500"
+                      loading="lazy"
                     />
                   </div>
                 </div>

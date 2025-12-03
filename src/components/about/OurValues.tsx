@@ -127,38 +127,7 @@ export default function OurValues() {
           })}
         </div>
 
-        <div className={`transition-all duration-1000 delay-600 ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}>
-          <div className="relative bg-gradient-to-br from-gray-900 to-gray-800 rounded-3xl p-12 overflow-hidden shadow-2xl">
-            <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0zNiAxOGMtNi42MjcgMC0xMiA1LjM3My0xMiAxMnM1LjM3MyAxMiAxMiAxMiAxMi01LjM3MyAxMi0xMi01LjM3My0xMi0xMi0xMnptMCAyMmMtNS41MjMgMC0xMC00LjQ3Ny0xMC0xMHM0LjQ3Ny0xMCAxMC0xMCAxMCA0LjQ3NyAxMCAxMC00LjQ3NyAxMC0xMCAxMHoiIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wNSIvPjwvZz48L3N2Zz4=')] opacity-30"></div>
-
-            <div className="relative z-10 text-center">
-              <div className="inline-flex items-center gap-2 px-6 py-3 bg-[#00aeef]/20 border border-[#00aeef]/50 rounded-full mb-8">
-                <Heart className="w-5 h-5 text-[#00aeef]" />
-                <span className="text-[#00aeef] font-semibold">Built on Values, Delivered with Care</span>
-              </div>
-
-              <h3 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                These Aren't Just Words on a Page
-              </h3>
-
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-                They're the foundation of every project we complete, every relationship we build, and every promise we make. When you work with GCAD, you're working with a team that lives these values every single day.
-              </p>
-
-              <div className="mt-10 grid md:grid-cols-4 gap-4">
-                {values.map((value, idx) => (
-                  <div
-                    key={idx}
-                    className="p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:bg-white/10 hover:border-[#00aeef]/50 transition-all duration-300 group"
-                  >
-                    <div className={`w-3 h-3 ${value.iconBg} rounded-full mx-auto mb-3 group-hover:scale-150 transition-transform duration-300`}></div>
-                    <p className="text-white font-semibold text-sm">{value.title}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
+        {/* Removed closing values highlight block per request */}
       </div>
     </section>
   );

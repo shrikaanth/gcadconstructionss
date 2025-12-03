@@ -1,6 +1,6 @@
 import Header from '../components/Header';
 import Portfolio from '../components/Portfolio';
-import FinalCTA from '../components/FinalCTA';
+import AboutCTA from '../components/about/AboutCTA';
 import Footer from '../components/Footer';
 import WhatsAppButton from '../components/WhatsAppButton';
 
@@ -12,7 +12,7 @@ export default function PortfolioPage() {
         <section className="pt-32">
           <Portfolio />
         </section>
-        <FinalCTA />
+        <AboutCTA />
       </main>
       <Footer />
       <WhatsAppButton />

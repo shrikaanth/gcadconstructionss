@@ -25,9 +25,18 @@ export default function BasementHero() {
           </div>
 
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-            Transform Your <span className="text-[#00aeef] inline-block hover:scale-105 transition-transform duration-300">Basement</span>
+            Transform Your{' '}
+            <span className="text-[#00aeef] inline-block hover:scale-105 transition-transform duration-300">
+              Basement
+            </span>
             <br />
-            Into Your Dream Space
+            Into Your Dream Space{' '}
+            <span className="inline-flex items-center gap-3 text-4xl md:text-5xl">
+              <span className="text-gray-400 line-through decoration-2 decoration-red-400">$80K</span>
+              <span className="text-[#00aeef] font-extrabold drop-shadow-[0_0_12px_rgba(0,174,239,0.85)] animate-pulse">
+                $47K
+              </span>
+            </span>
           </h1>
 
           <p className="text-2xl md:text-3xl text-gray-300 mb-6 max-w-4xl mx-auto">

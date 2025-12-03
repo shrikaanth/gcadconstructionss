@@ -56,7 +56,7 @@ export default function HomeRenovation() {
           </p>
           <div className="mt-6 max-w-3xl mx-auto">
             <p className="text-lg text-gray-700">
-              Whether your home needs a fresh look or a complete redesign, GCAD helps transform your space with craftsmanship that stands the test of Canadian weather, lifestyle, and family needs.
+              GCAD helps transform your space with craftsmanship that stands the test of Canadian weather, lifestyle, and family needs.
             </p>
           </div>
         </div>

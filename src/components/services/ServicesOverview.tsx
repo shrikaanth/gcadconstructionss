@@ -1,6 +1,7 @@
 import { Home, Wrench, Check, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useEffect, useRef, useState } from 'react';
+import { SITE_IMAGES } from '../../lib/siteImages';
 
 const services = [
   {
@@ -19,7 +20,7 @@ const services = [
     idealFor: ['Family room', 'Office', 'Guest suite', 'Play area', 'Gym'],
     upgrades: ['Bathroom', 'Wet bar', 'Storage', 'Accent walls'],
     color: 'from-blue-500 to-cyan-500',
-    image: 'https://images.pexels.com/photos/1648776/pexels-photo-1648776.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: SITE_IMAGES.basementLounge,
     route: '/basement-renovation'
   },
   {
@@ -38,7 +39,7 @@ const services = [
     idealFor: ['Modern kitchens', 'Spa bathrooms', 'Open concept', 'Hardwood floors'],
     upgrades: ['Custom cabinetry', 'Smart home', 'Lighting design', 'Premium finishes'],
     color: 'from-purple-500 to-pink-500',
-    image: 'https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: SITE_IMAGES.modernKitchenIsland,
     route: '/home-renovation'
   }
 ];
@@ -99,11 +100,12 @@ export default function ServicesOverview() {
                     <div className={`relative h-96 lg:h-auto overflow-hidden ${idx % 2 === 1 ? 'lg:col-start-2' : ''}`}>
                       <Link to={service.route} className="group/hero block h-full">
                         <img
-                          src={service.image}
-                          alt={service.title}
+                          src={service.image.url}
+                          alt={service.image.alt}
                           className={`w-full h-full object-cover transition-transform duration-700 ${
                             activeService === idx ? 'scale-110' : 'scale-100'
                           }`}
+                          loading="lazy"
                         />
                         <div className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-20 transition-opacity duration-500 ${
                           activeService === idx ? 'opacity-30' : 'opacity-20'

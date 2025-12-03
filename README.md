@@ -9,6 +9,10 @@ GCAD Constructions is a marketing and lead-generation site for a renovation comp
 - Portfolio and testimonial showcases.
 - Contact forms that capture enquiries with instant on-screen confirmation.
 - Reusable UI components with animation states.
+- Testimonial carousel with homeowner avatars and fallback initials.
+- Footer contact details link directly to phone, email, and service-area lookup.
+- Hero CTA form uses a darker slate treatment for stronger contrast.
+- CTA section shows the four-step “What Happens Next?” process for transparency.
 
 ## Feature Map
 | Feature | Location | Description |
@@ -16,6 +20,8 @@ GCAD Constructions is a marketing and lead-generation site for a renovation comp
 | Global Layout | `src/App.tsx`, `src/components/Header.tsx`, `src/components/Footer.tsx` | Site shell with service dropdown navigation, plus header and footer content. |
 | Home Sections | `src/components/Hero.tsx`, `src/components/HeroQuickForm.tsx`, `src/components/WhyChoose.tsx`, `src/components/BasementPackage.tsx`, `src/components/HomeRenovation.tsx`, `src/components/Portfolio.tsx`, `src/components/Testimonials.tsx`, `src/components/FinalCTA.tsx` | Landing page hero split with a quick inquiry form, plus service highlights and calls to action. |
 | Home Updated Page | `src/pages/HomeUpdatedPage.tsx` | Duplicate of the homepage experience exposed at `/homeupdated` for content experimentation. |
+| Visual Asset Catalog | `src/lib/siteImages.ts` | Centralised Unsplash image set with descriptive alt text, shared across all visual sections. |
+| Our Work Moving Gallery | `src/components/Portfolio.tsx`, `src/index.css` | Continuously scrolling showcase that surfaces recent project photos supplied by the client. |
 | Service Pages | `src/pages/ServicesPage.tsx`, `src/components/services/*` | Services overview with card links into basement and home renovation detail pages. |
 | Portfolio Page | `src/pages/PortfolioPage.tsx`, `src/components/Portfolio.tsx`, `src/components/FinalCTA.tsx` | Dedicated portfolio gallery page accessible at `/portfolio`. |
 | Basement Page | `src/pages/BasementPage.tsx`, `src/components/basement/*` | Basement renovation hero, packages, FAQs, testimonials, and CTAs. |
@@ -71,6 +77,7 @@ gcadconstructionss/
 ## Current Status
 - ✅ Landing pages render correctly.
 - ⚠️ npm reports 9 audit vulnerabilities (2 low, 5 moderate, 2 high).
+- ✅ All imagery now references the curated Unsplash set in `src/lib/siteImages.ts` for consistent loading and alt coverage.
 
 ## Testing & Validation
 - Manual testing: run `npm run dev` and verify navigation across all routes.
