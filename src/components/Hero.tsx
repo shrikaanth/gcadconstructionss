@@ -62,7 +62,7 @@ export default function Hero() {
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
               Ontario's Leading{' '}
               <span className="text-[#00aeef] inline-block hover:scale-105 transition-transform duration-300">
-                Basement & Renovation
+                Basement & Home Renovation
               </span>{' '}
               Specialists
             </h1>
