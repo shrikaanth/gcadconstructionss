@@ -74,7 +74,7 @@ export default function ServicesCTA() {
                     </div>
                     <div className="text-left">
                       <p className="text-white/70 text-sm">Call Us Now</p>
-                      <p className="text-white font-bold">+1 (437) 255-8805</p>
+                      <p className="text-white font-bold">+1 (437) 269-8805</p>
                     </div>
                   </div>
                 </div>
@@ -86,7 +86,7 @@ export default function ServicesCTA() {
                     </div>
                     <div className="text-left">
                       <p className="text-white/70 text-sm">Email Us</p>
-                      <p className="text-white font-bold text-sm">info@gcad.com</p>
+                      <p className="text-white font-bold text-sm">gcadconstruction1@gmail.com</p>
                     </div>
                   </div>
                 </div>

@@ -41,26 +41,26 @@ export default function ContactInfo() {
             {
               icon: Phone,
               title: 'Call Us',
-              primary: '+1 (437) 255-8805',
+              primary: '+1 (437) 269-8805',
               secondary: 'Mon-Sat: 9AM - 7PM',
               color: 'from-blue-500 to-cyan-500',
-              action: 'tel:+14372558805'
+              action: 'tel:+14372698805'
             },
             {
               icon: MessageCircle,
               title: 'Chat on WhatsApp',
-              primary: '+1 (437) 255-8805',
+              primary: '+1 (437) 269-8805',
               secondary: 'Instant answers from our team',
               color: 'from-green-500 to-emerald-500',
-              action: 'https://wa.me/14372558805'
+              action: 'https://wa.me/14372698805'
             },
             {
               icon: Mail,
               title: 'Email Us',
-              primary: 'info@gcad.com',
+              primary: 'gcadconstruction1@gmail.com',
               secondary: '24hr response time',
               color: 'from-purple-500 to-pink-500',
-              action: 'mailto:info@gcad.com'
+              action: 'mailto:gcadconstruction1@gmail.com'
             },
             {
               icon: Clock,

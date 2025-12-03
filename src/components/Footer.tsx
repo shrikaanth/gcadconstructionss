@@ -111,10 +111,10 @@ export default function Footer() {
                 <div>
                   <p className="text-sm text-gray-400">Phone</p>
                   <a
-                    href="tel:+14372558805"
+                    href="tel:+14372698805"
                     className="text-white font-semibold hover:text-[#00aeef] transition-colors duration-300"
                   >
-                    +1 (437) 255-8805
+                    +1 (437) 269-8805
                   </a>
                 </div>
               </div>
@@ -126,10 +126,10 @@ export default function Footer() {
                 <div>
                   <p className="text-sm text-gray-400">Email</p>
                   <a
-                    href="mailto:info@gcadconstruction.com"
+                    href="mailto:gcadconstruction1@gmail.com"
                     className="text-white font-semibold hover:text-[#00aeef] transition-colors duration-300"
                   >
-                    info@gcadconstruction.com
+                    gcadconstruction1@gmail.com
                   </a>
                 </div>
               </div>

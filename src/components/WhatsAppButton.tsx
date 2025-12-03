@@ -1,4 +1,4 @@
-const WHATSAPP_NUMBER = '14372558805';
+const WHATSAPP_NUMBER = '14372698805';
 const WHATSAPP_MESSAGE = encodeURIComponent('Hi GCAD team! I’d like to discuss a renovation project.');
 const whatsappIcon = new URL('../../WhatsApp.svg.webp', import.meta.url).href;
 

@@ -30,7 +30,7 @@ export default function HomeRenovationCTA() {
                   <ArrowRight className="w-8 h-8 group-hover:translate-x-2 transition-transform duration-300" />
                 </Link>
                 <a
-                  href="tel:+14372558805"
+                  href="tel:+14372698805"
                   className="group px-12 py-6 bg-white/10 backdrop-blur-sm border-2 border-white text-white font-bold text-2xl rounded-xl hover:bg-white/20 transition-all duration-300 hover:scale-105 inline-flex items-center gap-3"
                 >
                   <Phone className="w-8 h-8" />
@@ -40,8 +40,8 @@ export default function HomeRenovationCTA() {
             </div>
             <div className="grid md:grid-cols-3 gap-6 mb-10">
               {[
-                { icon: Phone, title: 'Call Us', value: '+1 (437) 255-8805', subtitle: 'Mon-Fri: 8AM - 6PM' },
-                { icon: Mail, title: 'Email Us', value: 'info@gcad.com', subtitle: '24hr response time' },
+                { icon: Phone, title: 'Call Us', value: '+1 (437) 269-8805', subtitle: 'Mon-Fri: 8AM - 6PM' },
+                { icon: Mail, title: 'Email Us', value: 'gcadconstruction1@gmail.com', subtitle: '24hr response time' },
                 { icon: Calendar, title: 'Free Consultation', value: 'No Obligation', subtitle: 'Clear, honest quote' }
               ].map((contact, idx) => {
                 const Icon = contact.icon;

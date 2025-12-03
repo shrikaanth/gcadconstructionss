@@ -124,7 +124,7 @@ export default function ContactForm() {
                     value={formData.phone}
                     onChange={handleChange}
                     className="w-full px-4 py-3 border-2 border-gray-300 rounded-xl focus:border-[#00aeef] focus:ring-4 focus:ring-[#00aeef]/20 transition-all duration-300 outline-none"
-                    placeholder="+1 (437) 255-8805"
+                    placeholder="+1 (437) 269-8805"
                   />
                 </div>
               </div>

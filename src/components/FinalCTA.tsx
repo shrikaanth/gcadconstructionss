@@ -22,7 +22,7 @@ export default function FinalCTA() {
     return () => observer.disconnect();
   }, []);
 
-  const whatsappUrl = 'https://wa.me/14372558805';
+  const whatsappUrl = 'https://wa.me/14372698805';
 
   return (
     <section ref={sectionRef} className="py-24 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 relative overflow-hidden">
@@ -81,8 +81,8 @@ export default function FinalCTA() {
               </div>
               <h4 className="text-xl font-bold text-white mb-2">Call Us</h4>
               <p className="text-gray-400">Mon-Fri: 8AM - 6PM</p>
-              <a href="tel:+14372558805" className="text-[#00aeef] font-semibold mt-2 hover:underline">
-                +1 (437) 255-8805
+              <a href="tel:+14372698805" className="text-[#00aeef] font-semibold mt-2 hover:underline">
+                +1 (437) 269-8805
               </a>
             </div>
 
@@ -92,7 +92,7 @@ export default function FinalCTA() {
               </div>
               <h4 className="text-xl font-bold text-white mb-2">Email Us</h4>
               <p className="text-gray-400">Response within 24 hours</p>
-              <p className="text-[#00aeef] font-semibold mt-2">info@gcadconstruction.com</p>
+              <p className="text-[#00aeef] font-semibold mt-2">gcadconstruction1@gmail.com</p>
             </div>
 
             <div className="text-center group">

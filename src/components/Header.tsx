@@ -158,10 +158,10 @@ export default function Header() {
 
             <div className="hidden md:block">
               <a
-                href="tel:+14372558805"
+                href="tel:+14372698805"
                 className="px-6 py-3 bg-[#00aeef] text-white font-semibold rounded-lg hover:shadow-xl hover:shadow-[#00aeef]/50 transition-all duration-300 hover:scale-105"
               >
-                +1 (437) 255-8805
+                +1 (437) 269-8805
               </a>
             </div>
 
@@ -249,10 +249,10 @@ export default function Header() {
                 );
               })}
               <a
-                href="tel:+14372558805"
+                href="tel:+14372698805"
                 className="mt-4 px-4 py-3 bg-[#00aeef] text-white font-semibold rounded-lg hover:shadow-xl hover:shadow-[#00aeef]/50 transition-all duration-300 text-center"
               >
-                +1 (437) 255-8805
+                +1 (437) 269-8805
               </a>
             </nav>
           </div>
